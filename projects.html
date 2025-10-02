@@ -1,51 +1,45 @@
-
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Md.Mosharaff Hossain</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<link rel="stylesheet" href="css/animate.css">
-	
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Styles -->
-  <style>
-    :root {
-       --primary: #6a11cb;
-  --secondary: #2575fc;
-  --bg-dark: #0f172a;
-  --text-light: #e2e8f0;
-  --card-bg: rgba(255, 255, 255, 0.08);
-  --glass: rgba(255, 255, 255, 0.05);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-     background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: var(--text-light);
-      overflow-x: hidden;
-	    line-height: 1.6;
-    }
-
-    /* Navbar */
-    /* Navbar */
+    <title>Md. Mosharaff Hossain - Achievements</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Internal CSS -->
+    <style>
+      /* ---------- Navbar Responsive ---------- */
+@media (max-width: 991px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+  nav .logo {
+    font-size: 1.2rem;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+}
+/* Navbar */
     nav {
       width: 100%;
       position: fixed;
@@ -56,9 +50,33 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 5%;
-      background: rgba(255, 255, 255, 0.8);
-   
-    }
+      height: 80px;
+     /* Glassmorphic effect */
+  background: rgba(255, 255, 255, 0.08); /* translucent white */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 16px 16px; /* rounded bottom */
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+
+nav.scrolled {
+  background: rgba(255, 255, 255, 0.15); /* more visible when scrolling */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+/* Logo Animation */
+.navbar-brand img.logo {
+  height: 50px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+}
+.navbar-brand img.logo:hover {
+  transform: scale(1.1) rotate(-2deg);
+  opacity: 0.95;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+}
 
     nav .logo {
       font-size: 1.4rem;
@@ -74,7 +92,7 @@
 
     nav ul li a {
       text-decoration: none;
-     color: var(--text-light);
+      color: white;
       font-weight: 500;
       position: relative;
       padding: 5px 0;
@@ -94,29 +112,13 @@
 
     nav ul li a:hover::after {
       width: 100%;
-	    background: linear-gradient(90deg, var(--primary), var(--secondary));
     }
 /* General nav styling */
-nav {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 5%;
-
-  /* Glass effect */
-  background: rgba(30, 31, 40, 0.6); /* slightly darker than page */
-  backdrop-filter: blur(15px); /* frosted blur */
-  -webkit-backdrop-filter: blur(15px); /* Safari support */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* subtle border */
-  border-radius: 15px; /* optional */
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-
-
  .nav li {
   margin: 15px 0;
 }
@@ -137,7 +139,7 @@ nav {
  .nav a.active {
   background: linear-gradient(135deg, #ff4d6d, #ff6f91);
   color: #fff;
-  box-shadow: 0px 4px 10px rgba(232, 228, 228, 0.4);
+  box-shadow: 0px 4px 10px rgba(255, 77, 109, 0.4);
 }
 
 /* 🔥 Hover effect styles */
@@ -229,606 +231,2010 @@ nav {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-
-
-
-
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: url("images/sir-1.jpg") center/cover no-repeat;
-      position: relative;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(15, 23, 42, 0.6);
-    }
-
-    .hero-content {
-       position: relative;
-  max-width: 650px;
-  text-align: center;
-  color: white;
-  padding: 2rem;
-  border-radius: 20px;
-  background: var(--glass);
-  backdrop-filter: blur(15px);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-  animation: fadeUp 1.5s ease;
-	}
-
-    .hero-content h1 {
-     font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glowText 3s infinite alternate;
-    }
-
-    .hero-content p {
-      font-size: 1.1rem;
-      opacity: 0.85;
-      margin-bottom: 2rem;
-    }
-
-    .btn {
-     display: inline-block;
-  padding: 0.9rem 2rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  color: white;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  box-shadow: 0 0 15px rgba(106,17,203,0.6);
-  transition: 0.4s ease;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-	/* ---------------- Projects ---------------- */
-.project {
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  transition: all 0.4s ease;
-}
-
-.project:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-}
-
-.project .overlay {
-  background: rgba(15,23,42,0.55);
-  backdrop-filter: blur(6px);
-  border-radius: 20px;
-  opacity: 0;
-  transition: 0.4s ease;
-}
-
-.project:hover .overlay {
-  opacity: 1;
-}
-
-.project .text h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: white;
-  text-shadow: 0 0 6px rgba(0,0,0,0.5);
-}
-
-/* ---------------- Testimonials ---------------- */
-.testimony-wrap {
-  background: var(--card-bg);
-  border-radius: 18px;
-  padding: 2rem;
-  backdrop-filter: blur(10px);
-  transition: 0.4s ease;
-}
-
-.testimony-wrap:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-}
-
-.testimony-wrap span.fa-quote-left {
-  font-size: 30px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 15px rgba(106,17,203,0.7);
-}
-
-
-
-/* ---------------- Animations ---------------- */
-@keyframes glowText {
-  from {
-    text-shadow: 0 0 10px rgba(106,17,203,0.6), 0 0 20px rgba(37,117,252,0.5);
-  }
-  to {
-    text-shadow: 0 0 25px rgba(106,17,203,0.9), 0 0 45px rgba(37,117,252,0.8);
-  }
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-/* Modern Footer */
-.modern-footer {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: #f1f5f9;
-  padding: 80px 5% 40px;
-  font-family: 'Poppins', sans-serif;
-  position: relative;
-  overflow: hidden;
-}
-/* Subtle floating gradient blobs in background */
-.modern-footer::before,
-.modern-footer::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.15;
-  z-index: 0;
-}
-.modern-footer::before {
-  width: 300px;
-  height: 300px;
-  background: #6a11cb;
-  top: -100px;
-  left: -80px;
-}
-.modern-footer::after {
-  width: 300px;
-  height: 300px;
-  background: #2575fc;
-  bottom: -120px;
-  right: -80px;
-}
-
-
-/* Grid */
+        /* ---------- Footer Responsive ---------- */
 .footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 35px;
-  margin-bottom: 50px;
-  position: relative;
-  z-index: 1;
+  grid-template-columns: 1fr 1fr; /* 2 per row on tablets */
 }
 
-/* Glass Card */
-.footer-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 10px;
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* 1 per row on small screens */
+  }
+  .footer-card {
+    aspect-ratio: auto; /* remove forced square on mobile */
+  }
+}
+/* Footer Base */
+/* Social & Contact Icons */
+.footer-column.about .social-links a,
+.footer-column.contact i {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 20px;
+  color: #e2e8f0;
   transition: all 0.4s ease;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.05);
-   aspect-ratio: 1 / 1;
-  transform-style: preserve-3d;
-    justify-content: space-between;
-}
-
-.footer-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.35), inset 0 2px 2px rgba(255,255,255,0.1);
-}
-
-/* Card Headings */
-.footer-card h3 {
-  font-size: 18px;
-  margin-bottom: 18px;
-  color: #fff;
-  font-weight: 600;
   position: relative;
 }
 
+/* Hover Effects for Social Icons */
+.footer-column.about .social-links a:hover {
+  color: #6a11cb;
+  transform: translateY(-5px) rotate(-10deg) scale(1.3);
+  text-shadow: 0 0 10px rgba(106,17,203,0.6),
+               0 0 20px rgba(38,117,252,0.6);
+}
 
-.footer-card h3::after {
-  content: "";
-  display: block;
-  width: 60px;
+/* Animated Pulse Effect */
+.footer-column.about .social-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: scale(0);
+  background: rgba(106,17,203,0.2);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.footer-column.about .social-links a:hover::after {
+  transform: scale(2);
+  opacity: 0;
+}
+
+/* Hover Effect for Contact Icons */
+.footer-column.contact i {
+  color: #6a11cb;
+  transition: all 0.4s ease;
+}
+
+.footer-column.contact i:hover {
+  transform: scale(1.3) rotate(-10deg);
+  text-shadow: 0 0 10px rgba(106,17,203,0.6),
+               0 0 15px rgba(38,117,252,0.6);
+  cursor: pointer;
+}
+
+/* Newsletter Button Glow on Hover */
+.newsletter-form button:hover {
+  box-shadow: 0 0 15px rgba(106,17,203,0.6),
+              0 0 25px rgba(38,117,252,0.6);
+}
+
+.footer {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+  padding: 60px 20px 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Column Titles */
+.footer-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+}
+
+.footer-column h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
   height: 3px;
   background: linear-gradient(90deg, #6a11cb, #2575fc);
-  margin-top: 6px;
   border-radius: 3px;
 }
 
-.footer-card p {
-  line-height: 1.7;
-  opacity: 0.9;
+/* About Text */
+.footer-column.about p {
+  line-height: 1.8;
+  color: #cbd5e1;
 }
 
-.footer-card ul {
+/* Social Icons */
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #e2e8f0;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #6a11cb;
+  transform: translateY(-3px);
+}
+
+/* Quick Links */
+.footer-column.links ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-card ul li {
-  margin: 12px 0;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
+.footer-column.links ul li {
+  margin-bottom: 12px;
 }
 
-.footer-card ul li i {
-  margin-right: 10px;
-  color: #6b85b3;
-   font-size: 16px;
-}
-
-.footer-card ul li a {
-  color: #f1f5f9;
+.footer-column.links ul li a {
+  color: #cbd5e1;
   text-decoration: none;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.footer-card ul li a:hover {
-  color: #9158cf;
-  text-shadow: 0 0 6px rgba(106,17,203,0.8);
+.footer-column.links ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  transition: width 0.3s ease;
 }
 
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 14px;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  color: #f1f5f9;
-  font-size: 20px;
-  transition: 0.35s ease;
+.footer-column.links ul li a:hover::after {
+  width: 100%;
 }
 
-.social-links a:hover {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
-  transform: scale(1.2) rotate(8deg);
-  box-shadow: 0px 4px 18px rgba(0,0,0,0.3);
+/* Contact Column */
+.footer-column.contact p {
+  margin-bottom: 10px;
+  color: #cbd5e1;
+}
+
+.footer-column.contact i {
+  margin-right: 10px;
+  color: #6a11cb;
 }
 
 /* Footer Bottom */
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.15);
-  padding-top: 22px;
   text-align: center;
-  font-size: 14px;
-  opacity: 0.75;
-  position: relative;
-  z-index: 1;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
 }
 
-    /* Footer */
-    footer {
-      padding: 2rem 5%;
-      text-align: center;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
-      margin-top: 2rem;
-    }
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    gap: 30px;
+  }
+}
+/* Newsletter Column */
+.footer-column.newsletter p {
+  margin-bottom: 15px;
+  color: #cbd5e1;
+}
 
-    footer .socials {
-      margin: 1rem 0;
-    }
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
-    footer .socials a {
-      margin: 0 10px;
-      color: white;
-      font-size: 1.2rem;
-      transition: 0.3s;
-    }
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
 
-    footer .socials a:hover {
-      color: var(--secondary);
-    }
-	/* Footer Styling */
+.newsletter-form input[type="email"]:focus {
+  box-shadow: 0 0 0 3px rgba(106,17,203,0.4);
+}
 
-  </style>
+.newsletter-form button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+}
+
+/* Responsive Footer Grid */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+        :root {
+            --primary: #6a11cb;
+            --secondary: #2575fc;
+            --bg-dark: #0f172a;
+            --text-light: #e2e8f0;
+            --card-bg: rgba(255, 255, 255, 0.08);
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #141415, #2e3b6a);
+            color: var(--text-light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ========== NAVIGATION ========== */
+       
+        /* ========== ACHIEVEMENTS SECTION ========== */
+        .achievements-section {
+            padding: 120px 20px 60px;
+            background: linear-gradient(135deg, #0a0f1c, #131a2d);
+        }
+
+        .heading-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .heading-section .subheading {
+            display: inline-block;
+            padding: 6px 14px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 50px;
+            color: #555;
+            margin-bottom: 12px;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .heading-section h2 {
+            font-size: 38px;
+            font-weight: 600;
+            color: #00f0ff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .heading-section h2::after {
+            content: '';
+            display: block;
+            margin: 10px auto;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #00f0ff, #ff00f0);
+            border-radius: 2px;
+        }
+
+        .heading-description {
+            font-size: 16px;
+            color: #ccc;
+            max-width: 800px;
+            margin: 15px auto 0;
+            line-height: 1.6;
+        }
+
+        /* ========== HORIZONTAL REEL ========== */
+        .reel-section {
+            padding: 40px 0;
+        }
+
+        .reel-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .reel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .reel-header h2 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .reel {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .reel-nav {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-arrow {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            border: none;
+            background: white;
+            box-shadow: 0 12px 30px rgba(2,6,23,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform .15s ease, background .15s;
+        }
+
+        .btn-arrow:active { 
+            transform: translateY(1px); 
+        }
+
+        .btn-arrow:focus { 
+            outline: 3px solid rgba(26,86,219,0.15); 
+        }
+
+        .scroller {
+            -webkit-overflow-scrolling: touch;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            display: flex;
+            gap: 18px;
+            padding: 16px 10vw;
+            scroll-snap-type: x mandatory;
+            align-items: center;
+            width: 100%;
+        }
+
+        .scroller::-webkit-scrollbar { 
+            height: 10px; 
+        }
+
+        .scroller::-webkit-scrollbar-thumb { 
+            background: rgba(26,86,219,0.25); 
+            border-radius: 999px; 
+        }
+
+        .scroller::-webkit-scrollbar-track { 
+            background: transparent; 
+        }
+
+        .card {
+            position: relative;
+            flex: 0 0 260px;
+            height: 380px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(245,247,250,0.9));
+            box-shadow: 0 6px 22px rgba(15,23,42,0.08);
+            transform-origin: center center;
+            transition: transform 300ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms;
+            scroll-snap-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            will-change: transform, filter;
+            transition: transform 500ms cubic-bezier(.2,.9,.2,1);
+            backface-visibility: hidden;
+        }
+
+        .card .grad {
+            position: absolute;
+            left: 0; 
+            right: 0; 
+            top: 0; 
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.35) 100%);
+            pointer-events: none;
+            mix-blend-mode: multiply;
+        }
+
+        .caption {
+            position: absolute;
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            transform: translateY(12px);
+            opacity: 0;
+            transition: all 240ms ease;
+            color: white;
+            text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+            font-weight: 600;
+            font-size: 14px;
+            pointer-events: none;
+        }
+
+        .card:hover .caption {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .card.center {
+            box-shadow: 0 18px 40px rgba(2,6,23,0.16);
+        }
+
+        .card:not(.center) {
+            filter: saturate(.95) contrast(.98);
+        }
+
+        .card:focus {
+            outline: 3px solid rgba(26,86,219,0.14);
+            transform: translateY(-6px) scale(1.02);
+        }
+
+        .caption small { 
+            display: block; 
+            font-weight: 500; 
+            opacity: 0.85; 
+            font-size: 12px; 
+            margin-top: 6px; 
+        }
+
+        @media (max-width: 900px) {
+            .card {
+                flex: 0 0 220px;
+                height: 320px;
+            }
+            .scroller { 
+                padding: 16px 6vw; 
+            }
+        }
+
+        @media (max-width: 520px) {
+            .card {
+                flex: 0 0 180px;
+                height: 260px;
+            }
+            .reel-header h2 { 
+                font-size: 16px; 
+            }
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimony-section {
+            background: var(--primary);
+            padding: 80px 0;
+        }
+
+        .testimony-wrap {
+            background: var(--card-bg);
+            border-radius: 18px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: 0.4s ease;
+        }
+
+        .testimony-wrap:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+        }
+
+        .testimony-wrap span.fa-quote-left {
+            font-size: 30px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 15px rgba(106,17,203,0.7);
+        }
+        /* ========== ANIMATIONS ========== */
+        @keyframes glowText {
+            from {
+                text-shadow: 0 0 10px rgba(106,17,203,0.6), 0 0 20px rgba(37,117,252,0.5);
+            }
+            to {
+                text-shadow: 0 0 25px rgba(106,17,203,0.9), 0 0 45px rgba(37,117,252,0.8);
+            }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	
-	 <!-- home -->
-	<nav id="ftco-navbar" class="navbar">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Md.Mosharraf Hossain</a>
-    <button class="menu-toggle" type="button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
 
-    <div id="ftco-nav">
-      <ul class="nav">
-        <li><a href="index.html" >Home</a></li>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+ <a href="index.html" class="navbar-brand">
+      <img src="images/logo.jpeg" alt="Logo" class="logo">
+    </a>
+
+			<button class="menu-toggle" type="button">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+
+
+			<div id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="index.html" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="skills.html" class="nav-link"><span>Skills</span></a></li> 
+					<li class="nav-item"><a href="projects.html" class="nav-link"><span>Achievements</span></a></li> 
+					<li class="nav-item"><a href="contact.html" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <!-- ========== ACHIEVEMENTS HERO ========== -->
+    <section class="achievements-section">
+        <div class="container-fluid px-md-4">
+            <div class="row justify-content-center pb-5 heading-section">
+                <div class="col-md-12 ftco-animate">
+                    <span class="subheading">Executive</span>
+                    <h2 class="mb-4 text-gradient">Achievements</h2>
+                    <p class="heading-description">
+                        A showcase of transformative projects that blend innovation, technology, and creativity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- ========== PROFESSIONAL ACHIEVEMENTS SECTION ========== -->
+
+<section class="achievements-section">
+    <div class="">
+       
+        <div class="achievements-reel">
+            <div class="reel-controls">
+                <button class="control-btn prev-btn" id="prevBtn" aria-label="Previous achievements">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="control-btn next-btn" id="nextBtn" aria-label="Next achievements">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="scroller-container">
+                <div class="scroller" id="scroller">
+                    <!-- Achievement 1 -->
+                    <div class="achievement-card" data-title="Innovative Career Solutions">
+                        <div class="card-image">
+                            <img src="images/ceo.png" alt="Innovative Career Solutions" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Innovative Career Solutions</h3>
+                            <p>Technology · Career Development</p>
+                            <div class="achievement-badge">Achievement</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 2 -->
+                    <div class="achievement-card" data-title="Transformative Tech Initiatives">
+                        <div class="card-image">
+                            <img src="images/ac-2.webp" alt="Transformative Tech Initiatives" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Transformative Tech Initiatives</h3>
+                            <p>Innovation · Research</p>
+                            <div class="achievement-badge">Community</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 3 -->
+                    <div class="achievement-card" data-title="Community Engagement Programs">
+                        <div class="card-image">
+                            <img src="images/ac-3.webp" alt="Community Engagement Programs" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Community Engagement Programs</h3>
+                            <p>Impact · Outreach</p>
+                            <div class="achievement-badge">Community</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 4 -->
+                    <div class="achievement-card" data-title="Leveraging Technology">
+                        <div class="card-image">
+                            <img src="images/ac-4.jpeg" alt="Leveraging Technology" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Leveraging Technology</h3>
+                            <p>Solutions · Growth</p>
+                            <div class="achievement-badge">Innovation</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 5 -->
+                    <div class="achievement-card" data-title="Enhancing Lives & Creating Jobs">
+                        <div class="card-image">
+                            <img src="images/ac-5.jpeg" alt="Enhancing Lives & Creating Jobs" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Enhancing Lives & Creating Jobs</h3>
+                            <p>Jobs · Sustainability</p>
+                            <div class="achievement-badge">Impact</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 6 -->
+                    <div class="achievement-card" data-title="Data-Driven Platforms">
+                        <div class="card-image">
+                            <img src="images/ac-6.jpeg" alt="Data-Driven Platforms" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Data-Driven Platforms</h3>
+                            <p>Analytics · Scale</p>
+                            <div class="achievement-badge">Technology</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 7 -->
+                    <div class="achievement-card" data-title="Educational Tech Ecosystem">
+                        <div class="card-image">
+                            <img src="images/ac-9.jpeg" alt="Educational Tech Ecosystem" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Dilligite Team</h3>
+                            <p>Learning · Product</p>
+                            <div class="achievement-badge">Team</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 8 -->
+                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
+                        <div class="card-image">
+                            <img src="images/ac-8.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Sustainable Innovation Lab</h3>
+                            <p>R&D · Environment</p>
+                            <div class="achievement-badge">Research</div>
+                        </div>
+                    </div>
+                    <!-- Achievement 9 -->
+                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
+                        <div class="card-image">
+                            <img src="images/ac-7.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Community Engagement Programs</h3>
+                            <p>Environment</p>
+                            <div class="achievement-badge">Research</div>
+                        </div>
+                    </div>
+                    <!-- Achievement 10 -->
+                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
+                        <div class="card-image">
+                            <img src="images/ac-10.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Sustainable Innovation Lab</h3>
+                            <p>R&D · Environment</p>
+                            <div class="achievement-badge">Research</div>
+                        </div>
+                    </div>
+                     <!-- Achievement 12 -->
+                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
+                        <div class="card-image">
+                            <img src="images/ac-12.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>EDGE</h3>
+                            <p>Workshop</p>
+                            <div class="achievement-badge">Innovation</div>
+                        </div>
+                    </div>
+                    <!-- Achievement 11 -->
+                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
+                        <div class="card-image">
+                            <img src="images/ac-11.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Community Engagement Programs</h3>
+                            <p>R&D · Environment</p>
+                            <div class="achievement-badge">Community</div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="reel-indicators">
+                <div class="scroll-dots" id="scrollDots"></div>
+                <div class="position-indicator">
+                    <span id="currentPosition">1</span> of <span id="totalItems">8</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* ========== PROFESSIONAL ACHIEVEMENTS STYLES ========== */
+    .achievements-section {
+        padding: 100px 20px;
+            background: linear-gradient(135deg, #010005 0%, #2a4276 100%);
+            position: relative;
+            overflow: hidden;;
+    }
+
+    .achievements-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(135deg, #010005 0%, #2a4276 100%);
+    }
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .section-title {
+        font-size: 3rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #eceaee 0%, #2575fc 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+        color: #94a3b8;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .achievements-reel {
+        position: relative;
+    }
+
+    .reel-controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    .control-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: all;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .control-btn:hover {
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        transform: scale(1.1);
+        box-shadow: 0 10px 30px rgba(106, 17, 203, 0.4);
+    }
+
+    .control-btn:active {
+        transform: scale(0.95);
+    }
+
+    .control-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .control-btn:disabled:hover {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+    }
+
+    .scroller-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 60px 0;
+    }
+
+    .scroller {
+        display: flex;
+        gap: 30px;
+        padding: 0 100px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-snap-type: x mandatory;
+    }
+
+    .scroller::-webkit-scrollbar {
+        display: none;
+    }
+
+    .achievement-card {
+        flex: 0 0 380px;
+        height: 480px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        scroll-snap-align: center;
+        transform: scale(0.9);
+        opacity: 0.7;
+        filter: brightness(0.7);
+    }
+
+    .achievement-card.active {
+        transform: scale(1);
+        opacity: 1;
+        filter: brightness(1);
+        border-color: rgba(107, 115, 125, 0.5);
+        box-shadow: 0 25px 50px rgba(45, 125, 199, 0.5);
+    }
+
+    .achievement-card:hover {
+        transform: scale(1.02);
+        border-color: rgba(106, 17, 203, 0.3);
+    }
+
+    .achievement-card.active:hover {
+        transform: scale(1.05);
+    }
+
+    .card-image {
+        position: relative;
+        width: 100%;
+        height: 75%;
+        overflow: hidden;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .achievement-card.active .card-image img {
+        transform: scale(1.1);
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+
+    .achievement-card.active .image-overlay {
+        opacity: 0.4;
+    }
+
+    .card-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px;
+        color: rgb(248, 248, 248);
+        background: linear-gradient(transparent, rgba(11, 14, 54, 0.9));
+        transform: translateY(10px);
+        transition: transform 0.3s ease;
+    }
+
+    .achievement-card.active .card-content {
+        transform: translateY(0);
+    }
+
+    .card-content h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        line-height: 1.3;
+        color: rgb(248, 248, 248);
+    }
+
+    .card-content p {
+        color: #cbd5e1;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+
+    .achievement-badge {
+        display: inline-block;
+        padding: 6px 12px;
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .reel-indicators {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .scroll-dots {
+        display: flex;
+        gap: 2px;
+    }
+
+    .scroll-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+    .scroll-dot.active {
+        background: white;
+        transform: scale(1.2);
+    }
+
+    .position-indicator {
+        color: #f7f8fa;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .section-title {
+            font-size: 2.5rem;
+        }
+
+        .achievement-card {
+            flex: 0 0 340px;
+            height: 440px;
+        }
+
+        .scroller {
+            padding: 0 80px;
+        }
+
+        .reel-controls {
+            padding: 0 10px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .achievements-section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .achievement-card {
+            flex: 0 0 300px;
+            height: 400px;
+        }
+
+        .scroller {
+            padding: 0 60px;
+            gap: 20px;
+        }
+
+        .control-btn {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .achievement-card {
+            flex: 0 0 280px;
+            height: 380px;
+        }
+
+        .scroller {
+            padding: 0 40px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+        }
+
+        .reel-controls {
+            padding: 0 5px;
+        }
+    }
+</style>
+
+<script>
+    // Professional Achievements Reel Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const scroller = document.getElementById('scroller');
+        const cards = Array.from(scroller.querySelectorAll('.achievement-card'));
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const scrollDots = document.getElementById('scrollDots');
+        const currentPosition = document.getElementById('currentPosition');
+        const totalItems = document.getElementById('totalItems');
+
+        let currentIndex = 0;
+        const cardWidth = cards[0].offsetWidth + 30; // card width + gap
+        const maxIndex = cards.length - 1;
+
+        // Set total items
+        totalItems.textContent = cards.length;
+
+        // Create scroll dots
+        cards.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = `scroll-dot ${index === 0 ? 'active' : ''}`;
+            dot.setAttribute('aria-label', `Go to achievement ${index + 1}`);
+            dot.addEventListener('click', () => scrollToIndex(index));
+            scrollDots.appendChild(dot);
+        });
+
+        const dots = scrollDots.querySelectorAll('.scroll-dot');
+
+        // Update active card based on scroll position
+        function updateActiveCard() {
+            const scrollerRect = scroller.getBoundingClientRect();
+            const scrollerCenter = scrollerRect.left + scrollerRect.width / 2;
+            
+            let closestCard = null;
+            let closestDistance = Infinity;
+            
+            cards.forEach((card, index) => {
+                const cardRect = card.getBoundingClientRect();
+                const cardCenter = cardRect.left + cardRect.width / 2;
+                const distance = Math.abs(cardCenter - scrollerCenter);
+                
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    closestCard = index;
+                }
+                
+                // Remove active class from all cards
+                card.classList.remove('active');
+            });
+            
+            // Add active class to closest card
+            if (closestCard !== null) {
+                cards[closestCard].classList.add('active');
+                currentIndex = closestCard;
+                updateControls();
+            }
+        }
+
+        // Update controls and indicators
+        function updateControls() {
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === maxIndex;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+            
+            currentPosition.textContent = currentIndex + 1;
+        }
+
+        // Scroll to specific index
+        function scrollToIndex(index) {
+            currentIndex = Math.max(0, Math.min(index, maxIndex));
+            const scrollPosition = currentIndex * cardWidth;
+            
+            scroller.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Navigation handlers
+        prevBtn.addEventListener('click', () => {
+            scrollToIndex(currentIndex - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            scrollToIndex(currentIndex + 1);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                scrollToIndex(currentIndex - 1);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                scrollToIndex(currentIndex + 1);
+            }
+        });
+
+        // Update on scroll
+        let scrollTimeout;
+        scroller.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(updateActiveCard, 100);
+        }, { passive: true });
+
+        // Touch/swipe support
+        let startX = 0;
+        let isSwiping = false;
+
+        scroller.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isSwiping = true;
+        }, { passive: true });
+
+        scroller.addEventListener('touchmove', (e) => {
+            if (!isSwiping) return;
+            e.preventDefault();
+        });
+
+        scroller.addEventListener('touchend', (e) => {
+            if (!isSwiping) return;
+            
+            const endX = e.changedTouches[0].clientX;
+            const diffX = startX - endX;
+            
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    scrollToIndex(currentIndex + 1);
+                } else {
+                    scrollToIndex(currentIndex - 1);
+                }
+            }
+            
+            isSwiping = false;
+        }, { passive: true });
+
+        // Initialize
+        updateActiveCard();
+        updateControls();
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            setTimeout(updateActiveCard, 100);
+        });
+    });
+</script>
+    <!-- ========== PROFESSIONAL TESTIMONIALS SECTION ========== -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Testimonials</span>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Hear from professionals who have experienced our exceptional service and results</p>
+        </div>
+
+        <div class="testimonials-container">
+            <div class="testimonials-controls">
+                <button class="control-btn prev-btn" id="testimonialPrevBtn" aria-label="Previous testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="control-btn next-btn" id="testimonialNextBtn" aria-label="Next testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="testimonials-scroller" id="testimonialsScroller">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Working with this team has been transformative for our business. Their innovative approach and technical expertise helped us achieve results beyond our expectations."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="images/arif.jpeg" alt="Arif Khan" />
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">Arif Khan</h4>
+                            <p class="client-position">Marketing Manager</p>
+                            <div class="client-company">Tech Solutions Inc.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"The dedication and professionalism shown by this team is exceptional. They delivered our project on time and exceeded all quality standards we set."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="images/sobail.webp" alt="Abdullah Sobail" />
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">Abdullah Sobail</h4>
+                            <p class="client-position">Marketing Manager</p>
+                            <div class="client-company">Global Innovations Ltd.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Outstanding service and remarkable attention to detail. The team's ability to understand our vision and translate it into reality is truly impressive."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="images/hossain.webp" alt="Mohammed Hossain" />
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">Mohammed Hossain</h4>
+                            <p class="client-position">Marketing Manager</p>
+                            <div class="client-company">Digital Solutions Co.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"A truly professional team that delivers excellence. Their strategic insights and technical capabilities have significantly impacted our business growth."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Mohammed Ali" />
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">Mohammed Ali</h4>
+                            <p class="client-position">Marketing Manager</p>
+                            <div class="client-company">Innovation Partners</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-indicators">
+                <div class="scroll-dots" id="scrollDots"></div>
+                <div class="position-indicator">
+                    <span id="currentTestimonial">1</span> of <span id="totalTestimonials">4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* ========== PROFESSIONAL TESTIMONIALS STYLES ========== */
+    .testimonials-section {
+        padding: 100px 20px;
+        background: linear-gradient(135deg, #010005 0%, #2a4276 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .testimonials-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.03"><polygon fill="white" points="0,1000 1000,0 1000,1000"/></svg>');
+        background-size: cover;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .section-badge {
+        display: inline-block;
+        padding: 8px 20px;
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .section-title {
+        font-size: 3rem;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    .testimonials-container {
+        position: relative;
+    }
+
+    .testimonials-controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    .control-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: all;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .control-btn:hover {
+        background: rgba(57, 54, 54, 0.25);
+        transform: scale(1.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .control-btn:active {
+        transform: scale(0.95);
+    }
+
+    .control-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .control-btn:disabled:hover {
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: none;
+    }
+
+    .testimonials-scroller {
+        display: flex;
+        gap: 30px;
+        padding: 20px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-snap-type: x mandatory;
+    }
+
+    .testimonials-scroller::-webkit-scrollbar {
+        display: none;
+    }
+
+    .testimonial-card {
+        flex: 0 0 calc(33.333% - 20px);
+        min-width: 350px;
+        background: rgba(255, 254, 255, 0.95);
+        backdrop-filter: blur(20px);
+        border-radius: 24px;
+        padding: 40px;
+        position: relative;
+        scroll-snap-align: start;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    }
+
+    .quote-icon {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: rgba(106, 17, 203, 0.1);
+        transform: scale(1.5);
+    }
+
+    .testimonial-content {
+        margin-bottom: 30px;
+    }
+
+    .testimonial-text {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #334155;
+        font-style: italic;
+        margin: 0;
+    }
+
+    .client-info {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .client-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid rgba(106, 17, 203, 0.2);
+        flex-shrink: 0;
+    }
+
+    .client-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .client-details {
+        flex: 1;
+    }
+
+    .client-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin: 0 0 4px 0;
+    }
+
+    .client-position {
+        font-size: 0.95rem;
+        color: #6b7280;
+        margin: 0 0 4px 0;
+    }
+
+    .client-company {
+        font-size: 0.85rem;
+        color: #6a11cb;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .testimonials-indicators {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .scroll-dots {
+        display: flex;
+        gap: 12px;
+    }
+
+    .scroll-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 254, 254, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+    .scroll-dot.active {
+        background: rgb(248, 248, 248);
+        transform: scale(1.2);
+    }
+
+    .position-indicator {
+        color: rgba(253, 251, 251, 0.8);
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .section-title {
+            font-size: 2.5rem;
+        }
+
+        .testimonial-card {
+            flex: 0 0 calc(50% - 20px);
+            min-width: 320px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .testimonials-section {
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .testimonial-card {
+            flex: 0 0 calc(100% - 20px);
+            min-width: 300px;
+            padding: 30px;
+        }
+
+        .control-btn {
+            width: 50px;
+            height: 50px;
+        }
+
+        .testimonials-controls {
+            padding: 0 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .testimonial-card {
+            padding: 25px;
+        }
+
+        .client-info {
+            flex-direction: column;
+            text-align: center;
+            gap: 12px;
+        }
+
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+        }
+    }
+</style>
+
+<script>
+    // Professional Testimonials Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const scroller = document.getElementById('testimonialsScroller');
+        const cards = Array.from(scroller.querySelectorAll('.testimonial-card'));
+        const prevBtn = document.getElementById('testimonialPrevBtn');
+        const nextBtn = document.getElementById('testimonialNextBtn');
+        const scrollDots = document.getElementById('scrollDots');
+        const currentTestimonial = document.getElementById('currentTestimonial');
+        const totalTestimonials = document.getElementById('totalTestimonials');
+
+        let currentIndex = 0;
+        const cardWidth = cards[0].offsetWidth + 30; // card width + gap
+        const maxIndex = cards.length - 1;
+
+        // Set total testimonials
+        totalTestimonials.textContent = cards.length;
+
+        // Create scroll dots
+        cards.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.className = `scroll-dot ${index === 0 ? 'active' : ''}`;
+            dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+            dot.addEventListener('click', () => scrollToIndex(index));
+            scrollDots.appendChild(dot);
+        });
+
+        const dots = scrollDots.querySelectorAll('.scroll-dot');
+
+        // Update controls and indicators
+        function updateControls() {
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === maxIndex;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+            
+            currentTestimonial.textContent = currentIndex + 1;
+        }
+
+        // Scroll to specific index
+        function scrollToIndex(index) {
+            currentIndex = Math.max(0, Math.min(index, maxIndex));
+            const scrollPosition = currentIndex * cardWidth;
+            
+            scroller.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+            
+            updateControls();
+        }
+
+        // Navigation handlers
+        prevBtn.addEventListener('click', () => {
+            scrollToIndex(currentIndex - 1);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            scrollToIndex(currentIndex + 1);
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                scrollToIndex(currentIndex - 1);
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                scrollToIndex(currentIndex + 1);
+            }
+        });
+
+        // Update current index based on scroll position
+        function updateCurrentIndex() {
+            const scrollLeft = scroller.scrollLeft;
+            const newIndex = Math.round(scrollLeft / cardWidth);
+            
+            if (newIndex !== currentIndex) {
+                currentIndex = newIndex;
+                updateControls();
+            }
+        }
+
+        // Throttled scroll handler
+        let scrollTimeout;
+        scroller.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(updateCurrentIndex, 100);
+        }, { passive: true });
+
+        // Touch/swipe support
+        let startX = 0;
+        let isSwiping = false;
+
+        scroller.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isSwiping = true;
+        }, { passive: true });
+
+        scroller.addEventListener('touchmove', (e) => {
+            if (!isSwiping) return;
+            e.preventDefault();
+        });
+
+        scroller.addEventListener('touchend', (e) => {
+            if (!isSwiping) return;
+            
+            const endX = e.changedTouches[0].clientX;
+            const diffX = startX - endX;
+            
+            if (Math.abs(diffX) > 50) {
+                if (diffX > 0) {
+                    scrollToIndex(currentIndex + 1);
+                } else {
+                    scrollToIndex(currentIndex - 1);
+                }
+            }
+            
+            isSwiping = false;
+        }, { passive: true });
+
+        // Initialize
+        updateControls();
+    });
+</script>
+   <!-- ========== PROFESSIONAL FOOTER ========== -->
+
+<!--footer-->
+	<!-- Modern Footer with Newsletter -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-column about">
+      <h3>About Me</h3>
+      <p>
+        Passionate about technology, leadership, and creating opportunities for the next generation. 
+        I build innovative digital solutions worldwide.
+      </p>
+      <div class="social-links">
+        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-column links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="skills.html">Skills</a></li>
-        <li><a href="projects.html" class="active">Achievements</a></li>
+        <li><a href="projects.html">Achievements</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
+
+    <!-- Contact Info -->
+    <div class="footer-column contact">
+      <h3>Contact</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Chittagong, Bangladesh</p>
+      <p><i class="fas fa-phone"></i> +8801726464904</p>
+      <p><i class="fas fa-envelope"></i> mosharraf.dlg@gmail.com</p>
+      <p><i class="fas fa-clock"></i> Mon - Fri: 9:00 - 18:00</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-column newsletter">
+      <h3>Subscribe</h3>
+      <p>Get updates on my latest projects and insights.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
   </div>
-</nav>
-	<!-- Tproject -->
-	<section class="ftco-section ftco-project" id="projects-section">
-		<div class="container-fluid px-md-4">
-			<div class="row justify-content-center pb-5">
-				<div class="col-md-12 heading-section text-center ftco-animate">
-					<span class="subheading">Executive </span>
-					<h2 class="mb-4">Achievements</h2>
-					<p> 
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/ac-1.webp);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Innovative Career Solutions </a></h3>
-							 
-</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/ac-2.webp);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Transformative Tech Initiatives </a></h3>
-							 
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/ac-3.webp);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Community Engagement Programs</a></h3>
-							 
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/ac-4.jpeg);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Leveraging Technology to Enhance Lives and Create Opportunities</a></h3>
-							 
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/ac-5.jpeg);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Harnessing Technology to Enhance Lives and Create Job Opportunities</a></h3>
-							 
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/ac-7.jpeg);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-							<span>Web Design</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/ac-6.jpeg);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-							<span>Web Design</span>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="project img shadow ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/ac-8.jpeg);">
-						<div class="overlay"></div>
-						<div class="text text-center p-4">
-							<h3><a href="#">Branding &amp; Illustration Design</a></h3>
-							<span>Web Design</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
- <!-- Testomonials -->
-	<section class="ftco-section testimony-section bg-primary">
-		<div class="container">
-			<div class="row justify-content-center pb-5">
-				<div class="col-md-12 heading-section heading-section-white text-center ftco-animate">
-					<span class="subheading">Testimonies</span>
-					<h2 class="mb-4">What client says about us?</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-				</div>
-			</div>
-			<div class="row ftco-animate">
-				<div class="col-md-12">
-					<div class="carousel-testimony owl-carousel">
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="text">
-									<span class="fa fa-quote-left"></span>
-									<p class="mb-4 pl-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Nazrul Islam</p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="text">
-									<span class="fa fa-quote-left"></span>
-									<p class="mb-4 pl-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Mohammed Hossain</p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="text">
-									<span class="fa fa-quote-left"></span>
-									<p class="mb-4 pl-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Md Sobail</p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="text">
-									<span class="fa fa-quote-left"></span>
-									<p class="mb-4 pl-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Mohammed Ali </p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimony-wrap py-4">
-								<div class="text">
-									<span class="fa fa-quote-left"></span>
-									<p class="mb-4 pl-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-									<div class="d-flex align-items-center">
-										<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-										<div class="pl-3">
-											<p class="name">Ariful Islam</p>
-											<span class="position">Marketing Manager</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-<footer class="modern-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <!-- About -->
-      <div class="footer-card">
-        <h3>About </h3>
-        <p>CEO, Dilgite Ltd.</p>
-            <p>Traniee & Mentor, ITBI IICT CUET.</p>
-      </div>
 
-      <!-- Quick Links -->
-      <div class="footer-card">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="https://www.facebook.com/share/1PeQeRikT1/">Diligite</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="projects.html">Achievements</a></li>
-       
-        </ul>
-      </div>
-
-      <!-- Contact Info -->
-      <div class="footer-card">
-        <h3>Contact Info</h3>
-        <ul>
-          <li><i class="fa fa-map-marker"></i> Chittagong, Bangladesh</li>
-          <li><i class="fa fa-phone"></i> +8801726464904</li>
-          <li><i class="fa fa-envelope"></i> mosharraf.dlg@gmail.com</li>
-        </ul>
-      </div>
-
-      <!-- Social Media -->
-      <div class="footer-card">
-        <h3>Follow Me</h3>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; <script>document.write(new Date().getFullYear());</script> Md. Mosharraf Hossain. All rights reserved.</p>
-    </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Md. Mosharaff Hossain. All Rights Reserved.</p>
   </div>
 </footer>
 
-
-		<!-- loader -->
-		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery-migrate-3.0.1.min.js"></script>
-		<script src="js/popper.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.easing.1.3.js"></script>
-		<script src="js/jquery.waypoints.min.js"></script>
-		<script src="js/jquery.stellar.min.js"></script>
-		<script src="js/owl.carousel.min.js"></script>
-		<script src="js/jquery.magnific-popup.min.js"></script>
-		<script src="js/jquery.animateNumber.min.js"></script>
-		<script src="js/scrollax.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-		<script src="js/google-map.js"></script>
-		
-		<script src="js/main.js"></script>
-		<script>
-  const toggleBtn = document.querySelector(".menu-toggle");
-  const navCollapse = document.getElementById("ftco-nav");
-
-  toggleBtn.addEventListener("click", function () {
-    this.classList.toggle("active");
-    navCollapse.classList.toggle("show"); // show/hide nav menu
-  });
+<script>
+    // Set current year in copyright
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    });
 </script>
+    <!-- ========== SCRIPTS ========== -->
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+        </svg>
+    </div>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
 
-	</body>
-	</html>
+    <script>
+        // Mobile Navigation Toggle
+        const toggleBtn = document.querySelector(".menu-toggle");
+        const navCollapse = document.getElementById("ftco-nav");
+
+        toggleBtn.addEventListener("click", function () {
+            this.classList.toggle("active");
+            navCollapse.classList.toggle("show");
+        });
+
+        // Horizontal Reel Functionality
+        (function(){
+            const scroller = document.getElementById('scroller');
+            const cards = Array.from(scroller.querySelectorAll('.card'));
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            // Parameters for scaling
+            const minScale = 0.8;
+            const maxScale = 1.0;
+            const activateThreshold = 0.14;
+
+            // Lazy load images
+            const lazyObserver = new IntersectionObserver((entries, obs) => {
+                for(const e of entries){
+                    if(e.isIntersecting){
+                        const img = e.target.querySelector('img');
+                        if(img && img.dataset && img.dataset.src && !img.src){
+                            img.src = img.dataset.src;
+                        }
+                        obs.unobserve(e.target);
+                    }
+                }
+            }, { root: scroller, rootMargin: '200px', threshold: 0.05 });
+
+            cards.forEach(card => lazyObserver.observe(card));
+
+            // Smooth scaling
+            let ticking = false;
+            function onScroll(){
+                if(!ticking){
+                    requestAnimationFrame(() => {
+                        updateScales();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+
+            scroller.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', () => requestAnimationFrame(updateScales));
+
+            function updateScales(){
+                const rect = scroller.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+
+                cards.forEach(card => {
+                    const cRect = card.getBoundingClientRect();
+                    const cardCenter = cRect.left + cRect.width / 2;
+                    const distance = Math.abs(cardCenter - centerX);
+                    const maxDist = rect.width / 2 + cRect.width;
+                    const norm = Math.min(1, distance / maxDist);
+                    const scale = maxScale - (maxScale - minScale) * norm;
+                    
+                    card.style.transform = `translateY(${ -6 * (1 - norm) }px) scale(${scale.toFixed(4)})`;
+                    
+                    const fraction = distance / rect.width;
+                    if(fraction < activateThreshold){
+                        card.classList.add('center');
+                    } else {
+                        card.classList.remove('center');
+                    }
+                });
+            }
+
+            // Initial update
+            updateScales();
+
+            // Arrow navigation
+            function getScrollStep(){
+                const s = cards[0].getBoundingClientRect().width + parseInt(getComputedStyle(scroller).gap || getComputedStyle(scroller).columnGap || 18);
+                return s;
+            }
+
+            prevBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+            });
+
+            // Keyboard support
+            scroller.addEventListener('keydown', (e) => {
+                if(e.key === 'ArrowRight') { 
+                    e.preventDefault(); 
+                    scroller.scrollBy({ left: getScrollStep(), behavior: 'smooth' }); 
+                }
+                if(e.key === 'ArrowLeft') { 
+                    e.preventDefault(); 
+                    scroller.scrollBy({ left: -getScrollStep(), behavior: 'smooth' }); 
+                }
