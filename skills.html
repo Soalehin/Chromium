@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Md.Mosharaff Hossain</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Styles -->
+  <style>
+    :root {
+      --primary: #6a11cb;
+      --secondary: #2575fc;
+      --bg-dark: #40485b;
+      --text-light: #d4dae0;
+	   --card-bg: rgba(127, 119, 157, 0.7); 
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+     /* Gradient deep blue background */
+background: linear-gradient(135deg, #0f172a, #1e293b); /* dark gradient */
+  color: var(--text-light);
+      overflow-x: hidden;
+    }
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1; /* push footer down */
+}
+
+    /* Navbar */
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      background: rgba(255, 255, 255, 0.8);
+   
+    }
+
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+     color: var(--text-light);
+      font-weight: 500;
+      position: relative;
+      padding: 5px 0;
+      transition: 0.3s;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+	    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+/* General nav styling */
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+
+  /* Glass effect */
+  background: rgba(30, 31, 40, 0.6); /* slightly darker than page */
+  backdrop-filter: blur(15px); /* frosted blur */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* subtle border */
+  border-radius: 15px; /* optional */
+}
+
+
+ .nav li {
+  margin: 15px 0;
+}
+
+.nav a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Default active link */
+ .nav a.active {
+  background: linear-gradient(135deg, #ff4d6d, #ff6f91);
+  color: #fff;
+  box-shadow: 0px 4px 10px rgba(227, 224, 225, 0.4);
+}
+
+/* 🔥 Hover effect styles */
+ .nav a:hover {
+  background: linear-gradient(135deg, #75608d, #98b5e8); /* Gradient on hover */
+  color: #fff;
+  transform: translateX(8px); /* small slide */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Fancy underline animation */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 8px;
+  width: 0;
+  height: 2px;
+  background: #dba4a4;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 60%; /* grows underline */
+}
+/* Custom Toggle Button */
+/* Show hamburger only on small screens */
+/* Default: hide hamburger */
+.menu-toggle {
+  display: none;
+  width: 40px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background: #4c4848;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Animate into X */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Show hamburger only on small screens */
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  #ftco-nav {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+
+  #ftco-nav.show {
+    display: flex; /* visible when hamburger clicked */
+    animation: slideDown 0.3s ease;
+  }
+
+  #ftco-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url("images/sir-1.jpg") center/cover no-repeat;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 600px;
+      text-align: center;
+       color: #f1f1f1;
+  background: rgba(30, 31, 40, 0.7);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+	/* Make Skills Cards Square & Modern */
+/* Skills Cards: Glass Effect */
+.block-6.services {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #cca0a0;
+
+    background: rgba(255, 107, 107, 0.15);  /* subtle transparent white */
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(12px); /* frosted glass effect */
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.05);
+  aspect-ratio: 1 / 1;  /* keep square */
+}
+
+/* Hover effect */
+.block-6.services:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255, 255, 255, 0.08); /* slightly stronger on hover */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 2px 2px rgba(255,255,255,0.1);
+}
+
+/* Icon styling */
+.block-6.services .icon {
+  font-size: 50px;
+  color: #6a11cb; /* main accent color */
+  margin-bottom: 15px;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.block-6.services:hover .icon {
+  transform: scale(1.2) rotate(10deg);
+  color: #2575fc; /* secondary accent color on hover */
+}
+
+/* Heading styling */
+.block-6.services h3.heading {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #f1f5f9; /* light text */
+  font-weight: 600;
+}
+
+/* Text styling */
+.block-6.services p {
+  color: #e2e8f0; /* subtle light text */
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .block-6.services {
+    aspect-ratio: auto; /* Let them stack vertically on smaller screens */
+    padding: 20px;
+  }
+}
+
+/* Modern Footer */
+.modern-footer {
+  position: relative;
+  z-index: 1;
+   overflow: hidden;
+    
+}
+
+.modern-footer::before,
+.modern-footer::after {
+  content: "";
+  position: relative;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  z-index: 0;
+}
+.modern-footer::before {
+  width: 300px;
+  height: 300px;
+  background: #6a11cb;
+  top: -100px;
+  left: -80px;
+}
+.modern-footer::after {
+  width: 300px;
+  height: 300px;
+  background: #2575fc;
+  bottom: -120px;
+  right: -80px;
+}
+
+
+/* Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Glass Card */
+.footer-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 10px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.05);
+  transform-style: preserve-3d;
+   aspect-ratio: 1 / 1;
+    justify-content: space-between;
+}
+
+.footer-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.35), inset 0 2px 2px rgba(255,255,255,0.1);
+}
+
+/* Card Headings */
+.footer-card h3 {
+  font-size: 18px;
+  margin-bottom: 18px;
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+
+
+.footer-card h3::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  margin-top: 6px;
+  border-radius: 3px;
+}
+
+.footer-card p {
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.footer-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-card ul li {
+  margin: 12px 0;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-card ul li i {
+  margin-right: 10px;
+  color: #6b85b3;
+   font-size: 16px;
+}
+
+.footer-card ul li a {
+  color: #f1f5f9;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-card ul li a:hover {
+  color: #9158cf;
+  text-shadow: 0 0 6px rgba(106,17,203,0.8);
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: #f1f5f9;
+  font-size: 20px;
+  transition: 0.35s ease;
+}
+
+.social-links a:hover {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  transform: scale(1.2) rotate(8deg);
+  box-shadow: 0px 4px 18px rgba(0,0,0,0.3);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 22px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.75;
+  position: relative;
+  z-index: 1;
+}
+
+    /* Footer */
+    footer {
+      padding: 4rem 5% 1rem 5%;
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      margin-top: 2rem;
+    }
+
+    footer .socials {
+      margin: 1rem 0;
+    }
+
+    footer .socials a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    footer .socials a:hover {
+      color: var(--secondary);
+    }
+
+	/* Footer Styling */
+    /* Footer */
+    footer { padding: 4rem 5% 1rem 5%; background: linear-gradient(135deg, #0f172a, #1e293b); color: #f1f5f9; border-top-left-radius: 20px; border-top-right-radius: 20px; }
+    footer .footer-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 2rem; margin-bottom: 2rem; }
+    footer h3 { margin-bottom: 1rem; font-size: 1.2rem; background: linear-gradient(90deg,var(--primary),var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    footer a { color: #e2e8f0; text-decoration: none; transition: 0.3s; }
+    footer a:hover { color: var(--secondary); transform: translateX(4px); }
+    footer .social-links a { margin-right: 10px; font-size: 1.5rem; display: inline-block; transition: 0.3s; }
+    footer .social-links a:hover { color: var(--primary); transform: scale(1.2) rotate(5deg); }
+  #ftco-loader { display: none; } /* hide permanently */
+    /* Animations */
+    @keyframes fadeIn { 0% { opacity:0; transform: translateY(20px); } 100% { opacity:1; transform: translateY(0); } }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #about-section { flex-direction: column; }
+      .about-img, .about-info { width: 100%; }
+    }
+	#ftco-loader {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+
+	/* Footer Styling */
+
+  </style>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	
+	 <!-- home -->
+	<nav id="ftco-navbar" class="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Md.Mosharraf Hossain</a>
+    <button class="menu-toggle" type="button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <div id="ftco-nav">
+      <ul class="nav">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html"class="active">Skills</a></li>
+        <li><a href="projects.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+	<!-- skills-->
+
+	<section class="ftco-section" id="skills-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-12 heading-section text-center ftco-animate mb-5">
+					 <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">Skills</h2>
+					<h3 class="mb-4">“My expertise spans across these core areas of development and management:”
+</h2>
+					 
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 col-lg-3">
+					<div class="media block-6 services d-block bg-dark rounded-lg shadow ftco-animate">
+						<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-3d-design"></span></div>
+						<div class="media-body">
+							<h3 class="heading mb-3">project</h3>
+							<p>Experienced in creating clear, actionable project plans to achieve goals on time.
+</p>
+						</div>
+					</div> 
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="media block-6 services d-block bg-dark rounded-lg shadow ftco-animate">
+						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-app-development"></span></div>
+						<div class="media-body">
+							<h3 class="heading mb-3">Business Plan</h3>
+							<p>Adept at crafting comprehensive business plans that align with organizational objectives.</p>
+						</div>
+					</div> 
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="media block-6 services d-block bg-dark rounded-lg shadow ftco-animate">
+						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-web-programming"></span></div>
+						<div class="media-body">
+							<h3 class="heading mb-3">Strategic Planning
+</h3>
+							<p>Strong ability to develop and implement long-term strategies for growth and success.
+</p>
+						</div>
+					</div> 
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="media block-6 services d-block bg-dark rounded-lg shadow ftco-animate">
+						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-branding"></span></div>
+						<div class="media-body">
+							<h3 class="heading mb-3">Marketing Strategy
+</h3>
+							<p>Proficient in designing and executing effective marketing strategies to boost brand reach.
+</p>
+						</div>
+					</div> 
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 col-lg-3">
+					<div class="media block-6 services d-block bg-dark rounded-lg shadow ftco-animate">
+						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-computer"></span></div>
+						<div class="media-body">
+							<h3 class="heading mb-3">LinkedIn Recruiter
+</h3>
+							<p>Skilled in sourcing and connecting with top talent using LinkedIn Recruiter tools.
+</p>
+						</div>
+					</div> 
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="media block-6 services d-block bg-dark rounded-lg shadow ftco-animate">
+						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-vector"></span></div>
+						<div class="media-body">
+							<h3 class="heading mb-3">Agile Methodologies
+</h3>
+							<p> Skilled in applying Agile practices to improve team collaboration, flexibility, and project outcomes.</p>
+						</div>
+					</div> 
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="media block-6 services d-block bg-dark rounded-lg shadow ftco-animate">
+						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-vector"></span></div>
+						<div class="media-body">
+							<h3 class="heading mb-3">Software Project Management</h3>
+							<p>Experienced in planning, organizing, and leading software projects to successful delivery.
+</p>
+						</div>
+					</div> 
+				</div>
+				<div class="col-md-6 col-lg-3">
+					<div class="media block-6 services d-block bg-dark rounded-lg shadow ftco-animate">
+						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-zoom"></span></div>
+						<div class="media-body">
+							<h3 class="heading mb-3">Business Development
+</h3>
+							<p>Skilled in identifying opportunities, building relationships, and driving growth for organizations.</p>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</section>
+<section class="ftco-counter img bg-light" id="section-counter">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 d-flex">
+						<div class="icon d-flex justify-content-center align-items-center">
+							<span class="flaticon-suitcase"></span>
+						</div>
+						<div class="text">
+							<strong class="number" data-number="6">0</strong>
+							<span>Project Complete</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 d-flex">
+						<div class="icon d-flex justify-content-center align-items-center">
+							<span class="flaticon-loyalty"></span>
+						</div>
+						<div class="text">
+							<strong class="number" data-number="500">0</strong>
+							<span>Happy Clients</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 d-flex">
+						<div class="icon d-flex justify-content-center align-items-center">
+							<span class="flaticon-coffee"></span>
+						</div>
+						<div class="text">
+							<strong class="number" data-number="325">0</strong>
+							<span>Cups of coffee</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 justify-content-center counter-wrap ftco-animate">
+					<div class="block-18 d-flex">
+						<div class="icon d-flex justify-content-center align-items-center">
+							<span class="flaticon-calendar"></span>
+						</div>
+						<div class="text">
+							<strong class="number" data-number="7">0</strong>
+							<span>Years experienced</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-hireme">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-md-8 col-lg-8 d-flex align-items-center">
+					<div class="w-100 py-4">
+						<h2>Have a project on your mind?</h2>
+						<p> I’m here to help you design, develop, and launch it with creativity and precision. Let’s make it happen!</p>
+						<p class="mb-0"><a href="contact.html" class="btn btn-white py-3 px-4">Contact me</a></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-4 d-flex align-items-end">
+					
+				</div>
+			</div>
+		</div>
+	</section>
+<footer class="modern-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- About -->
+      <div class="footer-card">
+         <h3>About </h3>
+        <p>CEO, Dilgite Ltd.</p>
+            <p>Traniee & Mentor, ITBI IICT CUET.</p>
+      </div>
+      <!-- Quick Links -->
+      <div class="footer-card">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/share/1PeQeRikT1/">Diligite</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html">Achievements</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-card">
+        <h3>Contact Info</h3>
+        <ul>
+          <li><i class="fa fa-map-marker"></i> Chittagong, Bangladesh</li>
+          <li><i class="fa fa-phone"></i> +8801726464904</li>
+          <li><i class="fa fa-envelope"></i> mosharraf.dlg@gmail.com</li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-card">
+        <h3>Follow Me</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <script>document.write(new Date().getFullYear());</script> Md. Mosharraf Hossain. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery-migrate-3.0.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/jquery.animateNumber.min.js"></script>
+		<script src="js/scrollax.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+		<script src="js/google-map.js"></script>
+		
+		<script src="js/main.js"></script>
+		<script>
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const navCollapse = document.getElementById("ftco-nav");
+
+  toggleBtn.addEventListener("click", function () {
+    this.classList.toggle("active");
+    navCollapse.classList.toggle("show"); // show/hide nav menu
+  });
+</script>
+
+
+	</body>
+	</html>
+	

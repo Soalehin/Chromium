@@ -8155,7 +8155,7 @@ a {
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.5;
-  color: #d1d3d5;
+  color: #0d0d0d;
   font-weight: 400; }
 
 .text-primary {
@@ -8198,7 +8198,7 @@ h1, h2, h3, h4, h5,
     padding-bottom: .7rem;
     padding-left: 20px;
     padding-right: 20px;
-    color: #000000;
+    color:#e7e0e0;
     font-weight: 600;
     opacity: 1 !important;
     text-transform: uppercase; }

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+	<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Md.Mosharaff Hossain</title>
@@ -35,66 +36,12 @@
     }
 
     body {
-      background: #fff;
-      color:#0b0c0d;
+      background: var(--bg-dark);
+      color: var(--text-light);
       overflow-x: hidden;
     }
-/* ---------- Navbar Responsive ---------- */
-@media (max-width: 991px) {
-  nav {
-    padding: 1rem 2rem;
-  }
-  nav .logo {
-    font-size: 1.2rem;
-  }
-  nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  nav ul li a {
-    font-size: 15px;
-  }
-}
 
-/* ---------- Hero Responsive ---------- */
-@media (max-width: 768px) {
-  .hero {
-    height: auto; /* allow content to grow */
-    padding: 80px 20px;
-  }
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-  .hero-content p {
-    font-size: 1rem;
-  }
-}
-
-/* ---------- Footer Responsive ---------- */
-.footer-grid {
-  grid-template-columns: 1fr 1fr; /* 2 per row on tablets */
-}
-
-@media (max-width: 600px) {
-  .footer-grid {
-    grid-template-columns: 1fr; /* 1 per row on small screens */
-  }
-  .footer-card {
-    aspect-ratio: auto; /* remove forced square on mobile */
-  }
-}
-.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    font-size: 14px;
-    padding-top: .7rem;
-    padding-bottom: .7rem;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #211f1f;
-    font-weight: 600;
-    opacity: 1 !important;
-    text-transform: uppercase;
-}
+   
   /* Navbar */
     nav {
       width: 100%;
@@ -286,177 +233,236 @@ nav.scrolled {
   from { opacity: 0; transform: translateY(-10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-#home-section {
-  margin-top: 80px; /* same as navbar height */
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url("images/sir-1.jpg") center/cover no-repeat;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(15, 23, 42, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 600px;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+	 /* Section */
+    section.contact {
+      padding: 100px 7% 60px;
+      position: relative;
+    }
+
+    section.contact::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      left: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: var(--primary);
+      opacity: 0.2;
+      filter: blur(120px);
+    }
+
+    section.contact h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    section.contact p.subtitle {
+      text-align: center;
+      opacity: 0.8;
+      margin-bottom: 50px;
+    }
+
+    /* Grid Layout */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: var(--glass-bg);
+      padding: 35px;
+      border-radius: 20px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      transition: 0.3s;
+    }
+
+    .contact-form:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      border: none;
+      outline: none;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-light);
+      font-size: 15px;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      background: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 0 8px var(--secondary);
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Contact Info Cards */
+    .contact-info {
+      display: grid;
+      gap: 20px;
+    }
+
+    .info-card {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 18px 20px;
+      border-radius: 16px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+    }
+.info-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 10px 25px rgba(37,117,252,0.4);
 }
-.hero {
-  height: 90vh; /* 60% of viewport height */
-  min-height: 400px; /* optional minimum */
-  max-height: 700px; /* optional maximum */
-  overflow: hidden;
-  position: relative;
+.glow-icon {
+  animation: pulseGlow 2s infinite alternate;
 }
 
-.hero .slider-item {
-  height: 100%; /* make each slider item follow hero height */
-}
-@media (max-width: 768px) {
-  .hero {
-    height: 40vh; /* shorter on mobile */
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 10px rgba(106,17,203,0.6), 0 0 20px rgba(37,117,252,0.5);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(106,17,203,0.9), 0 0 45px rgba(37,117,252,0.8);
   }
 }
 
-.hero .text {
-  padding: 10px 15px; 
-  max-width: 600px;       /* wider, so text doesn’t break awkwardly */
-  /*animation: fadeInUp 1.5s ease;*/
-  position: relative;
-  z-index: 10;
-  margin-left: 10px;      /* keeps it aligned left */
-  margin-right: 0;
-}
-
-
-
-/* Subheading */
-.hero .text span.subheading {
-  font-size: 18px;
-  color: #f8fafc;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 500;
-  opacity: 0.95;
-}
-/* Glassmorphic Hero Box Position Fix */
-
-
-/* Heading with gradient */
-.hero .text h1 {
-  font-size: 42px;
-  font-weight: 700;
-  background: linear-gradient(90deg, #878589, #161616);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: white; /* fallback for unsupported browsers */
-  margin-bottom: 15px;
-  line-height: 1.2;
-}
-
-/* Paragraph / tagline */
-.hero .text h5 {
-  font-size: 18px;
-  color: #29292a;
-  line-height: 1.6;
-  font-weight: 400;
-}
-
-/* Wave Divider */
-.wave-divider {
-  margin-top: -5px;
-  line-height: 0;
-}
-
-/* Compact Intro Section */
-.intro-section {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+    .info-card:hover {
+      transform: translateX(8px);
+      background: rgba(255, 255, 255, 0.12);
+    }
+.info-card i {
+  font-size: 22px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: #fff;
-    display: flex;
- justify-content: center;
-  align-items: center;
-  padding: 20px 20px;
-  position: relative;
-}
-/* Overlay for subtle gradient/glass effect */
-.intro-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(30,41,59,0.8));
-  z-index: 0;
-}
-.intro-section .section-title {
-  font-size: 2rem; /* slightly smaller */
-  margin-bottom: 15px; /* less space below title */
-}
-
-.intro-section .section-text {
-  font-size: 1rem; /* slightly smaller paragraph */
-  max-width: 600px; /* narrower box for compact feel */
-  margin: 0 auto;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-/* Box with glass effect */
-.intro-box {
-  position: relative;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-radius: 20px;
-  padding: 40px 30px;
-  max-width: 700px;
-  color: #f8fafc;
-  text-align: center;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect */
-.intro-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
-}
-
-/* Title Styling */
-.intro-box .section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Paragraph Styling */
-.intro-box .section-text {
-  font-size: 1rem;
-  line-height: 1.6;
-  opacity: 0.9;
-  margin-bottom: 25px;
-}
-
-/* Call-to-Action Button */
-.intro-box .btn-primary {
-  display: inline-block;
-  padding: 12px 30px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
-  font-weight: 500;
-  text-decoration: none;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(106,17,203,0.6), 0 0 25px rgba(37,117,252,0.6);
   transition: all 0.3s ease;
 }
 
-.intro-box .btn-primary:hover {
-  background: linear-gradient(135deg, #2575fc, #6a11cb);
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(38,117,252,0.4);
+.info-card:hover i {
+  box-shadow: 0 0 20px rgba(106,17,203,0.9), 0 0 40px rgba(37,117,252,0.9);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .intro-box {
-    padding: 30px 20px;
-  }
+    .info-card i {
+      font-size: 22px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 12px;
+      border-radius: 50%;
+    }
 
-  .intro-box .section-title {
-    font-size: 1.8rem;
-  }
+    .info-card p {
+      margin: 0;
+      font-size: 15px;
+    }
 
-  .intro-box .section-text {
-    font-size: 0.95rem;
-  }
-}
+    .info-card span {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      section.contact {
+        padding: 70px 5% 40px;
+      }
+    }
 /* Footer Base */
 /* Social & Contact Icons */
 .footer-column.about .social-links a,
@@ -677,16 +683,11 @@ nav.scrolled {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
-
-    
-
   </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	
 	 <!-- home -->
-	<!-- ✅ Updated Navbar -->
- <!-- home -->
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
 		<div class="container">
  <a href="index.html" class="navbar-brand">
@@ -711,61 +712,48 @@ nav.scrolled {
 			</div>
 		</div>
 	</nav>
-	<section id="home-section" class="hero">
-  <div class="home-slider owl-carousel">
-    <!-- Slide 1 -->
-    <div class="slider-item">
-      <div class="overlay"></div>
-      <div class="container-fluid px-md-0">
-        <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-          <div class="one-third order-md-last img" style="background-image:url(images/sir-1.jpg);">
-            <div class="overlay"></div>
-            <div class="overlay-1"></div>
-          </div>
-          <div class="one-forth d-flex align-items-center ftco-animate" style="margin-left: 30px;" data-scrollax=" properties: { translateY: '70%' }">
-            <div class="text">
-           
-              <h1 class="mb-4 mt-3"><span>Md. Mosharaff</span> Hossain</h1>
-            </div>
-          </div>
+	<!-- Contact us-->
+
+	<!-- Contact Section -->
+  <section class="contact" id="contact-section">
+    <h1>Contact Me</h1>
+    <p class="subtitle">Have a project or idea? Let’s collaborate and build something great together.</p>
+
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Subject" required>
+          <textarea rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt glow-icon"></i>
+          <p><span>Address</span> Chittagong, Bangladesh</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-phone glow-icon"></i>
+          <p><span>Phone</span> +8801726464904</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-envelope glow-icon"></i>
+          <p><span>Email</span> mosharraf.dlg@gmail.com</p>
+        </div>
+        <div class="info-card">
+          <i class="fab fa-linkedin glow-icon"></i>
+          <p><span>LinkedIn</span> <a href="#" style="color:#fff;">/mdmosharrafhossain</a></p>
         </div>
       </div>
     </div>
-  
-    <!-- Slide 2 -->
-    <div class="slider-item">
-      <div class="overlay"></div>
-      <div class="container-fluid px-md-0">
-        <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-          <div class="one-third order-md-last img" style="background-image:url(images/sir-2.jpg);">
-            <div class="overlay"></div>
-            <div class="overlay-1"></div>
-          </div>
-          <div class="one-forth d-flex align-items-center ftco-animate" style="margin-left: 30px;"  data-scrollax=" properties: { translateY: '70%' }">
-            <div class="text">
-              <h2 span class="mb-4 mt-3">CEO of Diligite</span></h2>
-              <h5 class="mb-4 mt-3">Creating Opportunities Through Technology</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- 🔥 About / Intro Section -->
-<section class="intro-section">
-  <div class="container intro-box">
-    <h2 class="section-title">Welcome to My World!</h2>
-    <p class="section-text">
-      I’m passionate about technology, leadership, and creating opportunities for the next generation. 
-      Here’s a glimpse into who I am and what I do.
-    </p>
-     <a href="about.html" class="btn-primary">Learn More About Me</a>
-  </div>
-</section>
-
- <!--footer-->
+<!--footer-->
 	<!-- Modern Footer with Newsletter -->
 <footer class="footer">
   <div class="footer-container">
@@ -820,9 +808,6 @@ nav.scrolled {
     <p>© <span id="year"></span> Md. Mosharaff Hossain. All Rights Reserved.</p>
   </div>
 </footer>
-
-
-		
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
@@ -843,7 +828,6 @@ nav.scrolled {
 		
 		<script src="js/main.js"></script>
 		<script>
-             document.getElementById("year").innerText = new Date().getFullYear();
   const toggleBtn = document.querySelector(".menu-toggle");
   const navCollapse = document.getElementById("ftco-nav");
 
@@ -851,26 +835,6 @@ nav.scrolled {
     this.classList.toggle("active");
     navCollapse.classList.toggle("show"); // show/hide nav menu
   });
-  // Counter animation
-const counters = document.querySelectorAll('.number');
-counters.forEach(counter => {
-  counter.innerText = '0';
-  const updateCounter = () => {
-    const target = +counter.getAttribute('data-target');
-    const current = +counter.innerText;
-    const increment = target / 200;
-
-    if(current < target) {
-      counter.innerText = `${Math.ceil(current + increment)}`;
-      setTimeout(updateCounter, 20);
-    } else {
-      counter.innerText = target;
-    }
-  };
-  updateCounter();
-});
-
-
 </script>
 
 
