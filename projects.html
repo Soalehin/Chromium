@@ -1,28 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Md. Mosharaff Hossain - Achievements</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-    <!-- External CSS -->
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Internal CSS -->
-    <style>
-      /* ---------- Navbar Responsive ---------- */
+	<title>Md.Mosharaff Hossain</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+<!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Styles -->
+  <style>
+   /* Default Light Theme */
+:root {
+  --primary: #6a11cb;
+  --secondary: #2575fc;
+  --bg-dark: #ffffff;
+  --text-light: #0f172a;
+}
+/* Dark Mode Theme */
+body.dark-mode {
+  --primary: #ff4d6d;
+  --secondary: #ff6f91;
+  --bg-dark: #0f172a;
+  --text-light: #e2e8f0;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+/* Dark Mode Override */
+body.dark-mode .intro-section {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+}
+
+body.dark-mode .intro-section::before {
+  background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(30,41,59,0.8));
+}
+body.dark-mode .intro-box .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body.dark-mode .intro-box .btn-primary {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.dark-mode .intro-box .btn-primary:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(38,117,252,0.4);
+}
+body.dark-mode .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    font-size: 14px;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+    font-weight: 600;
+    opacity: 1 !important;
+    text-transform: uppercase;
+}
+body.dark-mode .achievements-section {
+        padding: 100px 20px;
+            background: linear-gradient(135deg, #010005 0%, #2a4276 100%);
+            position: relative;
+            overflow: hidden;;
+    }
+body.dark-mode .testimonials-section {
+        padding: 100px 20px;
+        background: linear-gradient(135deg, #010005 0%, #2a4276 100%);
+        position: relative;
+        overflow: hidden;
+    }
+/* Toggle button styles */
+.theme-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+  color: var(--text-light);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.theme-btn:hover {
+  transform: rotate(20deg) scale(1.2);
+  color: var(--primary);
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color:#0b0c0d;
+      overflow-x: hidden;
+    }
+/* ---------- Navbar Responsive ---------- */
 @media (max-width: 991px) {
   nav {
     padding: 1rem 2rem;
@@ -39,7 +134,46 @@
     font-size: 15px;
   }
 }
-/* Navbar */
+
+/* ---------- Hero Responsive ---------- */
+@media (max-width: 768px) {
+  .hero {
+    height: auto; /* allow content to grow */
+    padding: 80px 20px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Footer Responsive ---------- */
+.footer-grid {
+  grid-template-columns: 1fr 1fr; /* 2 per row on tablets */
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* 1 per row on small screens */
+  }
+  .footer-card {
+    aspect-ratio: auto; /* remove forced square on mobile */
+  }
+}
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    font-size: 14px;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #211f1f;
+    font-weight: 600;
+    opacity: 1 !important;
+    text-transform: uppercase;
+}
+  /* Navbar */
     nav {
       width: 100%;
       position: fixed;
@@ -230,1387 +364,12 @@ nav.scrolled {
   from { opacity: 0; transform: translateY(-10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
-        /* ---------- Footer Responsive ---------- */
-.footer-grid {
-  grid-template-columns: 1fr 1fr; /* 2 per row on tablets */
+#home-section {
+  margin-top: 80px; /* same as navbar height */
 }
-
-@media (max-width: 600px) {
-  .footer-grid {
-    grid-template-columns: 1fr; /* 1 per row on small screens */
-  }
-  .footer-card {
-    aspect-ratio: auto; /* remove forced square on mobile */
-  }
-}
-/* Footer Base */
-/* Social & Contact Icons */
-.footer-column.about .social-links a,
-.footer-column.contact i {
-  display: inline-block;
-  margin-right: 12px;
-  font-size: 20px;
-  color: #e2e8f0;
-  transition: all 0.4s ease;
-  position: relative;
-}
-
-/* Hover Effects for Social Icons */
-.footer-column.about .social-links a:hover {
-  color: #6a11cb;
-  transform: translateY(-5px) rotate(-10deg) scale(1.3);
-  text-shadow: 0 0 10px rgba(106,17,203,0.6),
-               0 0 20px rgba(38,117,252,0.6);
-}
-
-/* Animated Pulse Effect */
-.footer-column.about .social-links a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  transform: scale(0);
-  background: rgba(106,17,203,0.2);
-  transition: transform 0.4s ease, opacity 0.4s ease;
-}
-
-.footer-column.about .social-links a:hover::after {
-  transform: scale(2);
-  opacity: 0;
-}
-
-/* Hover Effect for Contact Icons */
-.footer-column.contact i {
-  color: #6a11cb;
-  transition: all 0.4s ease;
-}
-
-.footer-column.contact i:hover {
-  transform: scale(1.3) rotate(-10deg);
-  text-shadow: 0 0 10px rgba(106,17,203,0.6),
-               0 0 15px rgba(38,117,252,0.6);
-  cursor: pointer;
-}
-
-/* Newsletter Button Glow on Hover */
-.newsletter-form button:hover {
-  box-shadow: 0 0 15px rgba(106,17,203,0.6),
-              0 0 25px rgba(38,117,252,0.6);
-}
-
-.footer {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: #e2e8f0;
-  padding: 60px 20px 30px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Column Titles */
-.footer-column h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: #fff;
-  position: relative;
-}
-
-.footer-column h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 50px;
-  height: 3px;
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
-  border-radius: 3px;
-}
-
-/* About Text */
-.footer-column.about p {
-  line-height: 1.8;
-  color: #cbd5e1;
-}
-
-/* Social Icons */
-.social-links a {
-  display: inline-block;
-  margin-right: 10px;
-  color: #e2e8f0;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #6a11cb;
-  transform: translateY(-3px);
-}
-
-/* Quick Links */
-.footer-column.links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column.links ul li {
-  margin-bottom: 12px;
-}
-
-.footer-column.links ul li a {
-  color: #cbd5e1;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.footer-column.links ul li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
-  transition: width 0.3s ease;
-}
-
-.footer-column.links ul li a:hover::after {
-  width: 100%;
-}
-
-/* Contact Column */
-.footer-column.contact p {
-  margin-bottom: 10px;
-  color: #cbd5e1;
-}
-
-.footer-column.contact i {
-  margin-right: 10px;
-  color: #6a11cb;
-}
-
-/* Footer Bottom */
-.footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #94a3b8;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 20px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-container {
-    gap: 30px;
-  }
-}
-/* Newsletter Column */
-.footer-column.newsletter p {
-  margin-bottom: 15px;
-  color: #cbd5e1;
-}
-
-.newsletter-form {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.newsletter-form input[type="email"] {
-  flex: 1;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-.newsletter-form input[type="email"]:focus {
-  box-shadow: 0 0 0 3px rgba(106,17,203,0.4);
-}
-
-.newsletter-form button {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  border: none;
-  padding: 12px 18px;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.newsletter-form button:hover {
-  background: linear-gradient(135deg, #2575fc, #6a11cb);
-  transform: translateY(-2px);
-}
-
-/* Responsive Footer Grid */
-@media (max-width: 1024px) {
-  .footer-container {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-}
-        :root {
-            --primary: #6a11cb;
-            --secondary: #2575fc;
-            --bg-dark: #0f172a;
-            --text-light: #e2e8f0;
-            --card-bg: rgba(255, 255, 255, 0.08);
-            --glass: rgba(255, 255, 255, 0.05);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #141415, #2e3b6a);
-            color: var(--text-light);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
-
-        /* ========== NAVIGATION ========== */
-       
-        /* ========== ACHIEVEMENTS SECTION ========== */
-        .achievements-section {
-            padding: 120px 20px 60px;
-            background: linear-gradient(135deg, #0a0f1c, #131a2d);
-        }
-
-        .heading-section {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .heading-section .subheading {
-            display: inline-block;
-            padding: 6px 14px;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            background: rgba(0, 0, 0, 0.05);
-            border-radius: 50px;
-            color: #555;
-            margin-bottom: 12px;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .heading-section h2 {
-            font-size: 38px;
-            font-weight: 600;
-            color: #00f0ff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            position: relative;
-        }
-
-        .heading-section h2::after {
-            content: '';
-            display: block;
-            margin: 10px auto;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, #00f0ff, #ff00f0);
-            border-radius: 2px;
-        }
-
-        .heading-description {
-            font-size: 16px;
-            color: #ccc;
-            max-width: 800px;
-            margin: 15px auto 0;
-            line-height: 1.6;
-        }
-
-        /* ========== HORIZONTAL REEL ========== */
-        .reel-section {
-            padding: 40px 0;
-        }
-
-        .reel-wrap {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .reel-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 12px;
-            margin-bottom: 18px;
-        }
-
-        .reel-header h2 {
-            font-size: 20px;
-            margin: 0;
-        }
-
-        .reel {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        .reel-nav {
-            display: flex;
-            gap: 12px;
-        }
-
-        .btn-arrow {
-            width: 44px;
-            height: 44px;
-            border-radius: 10px;
-            border: none;
-            background: white;
-            box-shadow: 0 12px 30px rgba(2,6,23,0.12);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: transform .15s ease, background .15s;
-        }
-
-        .btn-arrow:active { 
-            transform: translateY(1px); 
-        }
-
-        .btn-arrow:focus { 
-            outline: 3px solid rgba(26,86,219,0.15); 
-        }
-
-        .scroller {
-            -webkit-overflow-scrolling: touch;
-            overflow-x: auto;
-            scroll-behavior: smooth;
-            display: flex;
-            gap: 18px;
-            padding: 16px 10vw;
-            scroll-snap-type: x mandatory;
-            align-items: center;
-            width: 100%;
-        }
-
-        .scroller::-webkit-scrollbar { 
-            height: 10px; 
-        }
-
-        .scroller::-webkit-scrollbar-thumb { 
-            background: rgba(26,86,219,0.25); 
-            border-radius: 999px; 
-        }
-
-        .scroller::-webkit-scrollbar-track { 
-            background: transparent; 
-        }
-
-        .card {
-            position: relative;
-            flex: 0 0 260px;
-            height: 380px;
-            border-radius: 12px;
-            overflow: hidden;
-            background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(245,247,250,0.9));
-            box-shadow: 0 6px 22px rgba(15,23,42,0.08);
-            transform-origin: center center;
-            transition: transform 300ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms;
-            scroll-snap-align: center;
-        }
-
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            will-change: transform, filter;
-            transition: transform 500ms cubic-bezier(.2,.9,.2,1);
-            backface-visibility: hidden;
-        }
-
-        .card .grad {
-            position: absolute;
-            left: 0; 
-            right: 0; 
-            top: 0; 
-            bottom: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 30%, rgba(0,0,0,0.35) 100%);
-            pointer-events: none;
-            mix-blend-mode: multiply;
-        }
-
-        .caption {
-            position: absolute;
-            left: 12px;
-            right: 12px;
-            bottom: 12px;
-            transform: translateY(12px);
-            opacity: 0;
-            transition: all 240ms ease;
-            color: white;
-            text-shadow: 0 6px 18px rgba(0,0,0,0.45);
-            font-weight: 600;
-            font-size: 14px;
-            pointer-events: none;
-        }
-
-        .card:hover .caption {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .card.center {
-            box-shadow: 0 18px 40px rgba(2,6,23,0.16);
-        }
-
-        .card:not(.center) {
-            filter: saturate(.95) contrast(.98);
-        }
-
-        .card:focus {
-            outline: 3px solid rgba(26,86,219,0.14);
-            transform: translateY(-6px) scale(1.02);
-        }
-
-        .caption small { 
-            display: block; 
-            font-weight: 500; 
-            opacity: 0.85; 
-            font-size: 12px; 
-            margin-top: 6px; 
-        }
-
-        @media (max-width: 900px) {
-            .card {
-                flex: 0 0 220px;
-                height: 320px;
-            }
-            .scroller { 
-                padding: 16px 6vw; 
-            }
-        }
-
-        @media (max-width: 520px) {
-            .card {
-                flex: 0 0 180px;
-                height: 260px;
-            }
-            .reel-header h2 { 
-                font-size: 16px; 
-            }
-        }
-
-        /* ========== TESTIMONIALS ========== */
-        .testimony-section {
-            background: var(--primary);
-            padding: 80px 0;
-        }
-
-        .testimony-wrap {
-            background: var(--card-bg);
-            border-radius: 18px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            transition: 0.4s ease;
-        }
-
-        .testimony-wrap:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-        }
-
-        .testimony-wrap span.fa-quote-left {
-            font-size: 30px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 15px rgba(106,17,203,0.7);
-        }
-        /* ========== ANIMATIONS ========== */
-        @keyframes glowText {
-            from {
-                text-shadow: 0 0 10px rgba(106,17,203,0.6), 0 0 20px rgba(37,117,252,0.5);
-            }
-            to {
-                text-shadow: 0 0 25px rgba(106,17,203,0.9), 0 0 45px rgba(37,117,252,0.8);
-            }
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-    </style>
-</head>
-
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
-		<div class="container">
- <a href="index.html" class="navbar-brand">
-      <img src="images/logo.jpeg" alt="Logo" class="logo">
-    </a>
-
-			<button class="menu-toggle" type="button">
-  <span class="bar"></span>
-  <span class="bar"></span>
-  <span class="bar"></span>
-</button>
-
-
-			<div id="ftco-nav">
-				<ul class="navbar-nav nav ml-auto">
-					<li class="nav-item"><a href="index.html" class="nav-link"><span>Home</span></a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link"><span>About</span></a></li>
-					<li class="nav-item"><a href="skills.html" class="nav-link"><span>Skills</span></a></li> 
-					<li class="nav-item"><a href="projects.html" class="nav-link"><span>Achievements</span></a></li> 
-					<li class="nav-item"><a href="contact.html" class="nav-link"><span>Contact</span></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-    <!-- ========== ACHIEVEMENTS HERO ========== -->
-    <section class="achievements-section">
-        <div class="container-fluid px-md-4">
-            <div class="row justify-content-center pb-5 heading-section">
-                <div class="col-md-12 ftco-animate">
-                    <span class="subheading">Executive</span>
-                    <h2 class="mb-4 text-gradient">Achievements</h2>
-                    <p class="heading-description">
-                        A showcase of transformative projects that blend innovation, technology, and creativity.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!-- ========== PROFESSIONAL ACHIEVEMENTS SECTION ========== -->
-
-<section class="achievements-section">
-    <div class="">
-       
-        <div class="achievements-reel">
-            <div class="reel-controls">
-                <button class="control-btn prev-btn" id="prevBtn" aria-label="Previous achievements">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <button class="control-btn next-btn" id="nextBtn" aria-label="Next achievements">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
-
-            <div class="scroller-container">
-                <div class="scroller" id="scroller">
-                    <!-- Achievement 1 -->
-                    <div class="achievement-card" data-title="Innovative Career Solutions">
-                        <div class="card-image">
-                            <img src="images/ceo.png" alt="Innovative Career Solutions" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Innovative Career Solutions</h3>
-                            <p>Technology · Career Development</p>
-                            <div class="achievement-badge">Achievement</div>
-                        </div>
-                    </div>
-
-                    <!-- Achievement 2 -->
-                    <div class="achievement-card" data-title="Transformative Tech Initiatives">
-                        <div class="card-image">
-                            <img src="images/ac-2.webp" alt="Transformative Tech Initiatives" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Transformative Tech Initiatives</h3>
-                            <p>Innovation · Research</p>
-                            <div class="achievement-badge">Community</div>
-                        </div>
-                    </div>
-
-                    <!-- Achievement 3 -->
-                    <div class="achievement-card" data-title="Community Engagement Programs">
-                        <div class="card-image">
-                            <img src="images/ac-3.webp" alt="Community Engagement Programs" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Community Engagement Programs</h3>
-                            <p>Impact · Outreach</p>
-                            <div class="achievement-badge">Community</div>
-                        </div>
-                    </div>
-
-                    <!-- Achievement 4 -->
-                    <div class="achievement-card" data-title="Leveraging Technology">
-                        <div class="card-image">
-                            <img src="images/ac-4.jpeg" alt="Leveraging Technology" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Leveraging Technology</h3>
-                            <p>Solutions · Growth</p>
-                            <div class="achievement-badge">Innovation</div>
-                        </div>
-                    </div>
-
-                    <!-- Achievement 5 -->
-                    <div class="achievement-card" data-title="Enhancing Lives & Creating Jobs">
-                        <div class="card-image">
-                            <img src="images/ac-5.jpeg" alt="Enhancing Lives & Creating Jobs" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Enhancing Lives & Creating Jobs</h3>
-                            <p>Jobs · Sustainability</p>
-                            <div class="achievement-badge">Impact</div>
-                        </div>
-                    </div>
-
-                    <!-- Achievement 6 -->
-                    <div class="achievement-card" data-title="Data-Driven Platforms">
-                        <div class="card-image">
-                            <img src="images/ac-6.jpeg" alt="Data-Driven Platforms" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Data-Driven Platforms</h3>
-                            <p>Analytics · Scale</p>
-                            <div class="achievement-badge">Technology</div>
-                        </div>
-                    </div>
-
-                    <!-- Achievement 7 -->
-                    <div class="achievement-card" data-title="Educational Tech Ecosystem">
-                        <div class="card-image">
-                            <img src="images/ac-9.jpeg" alt="Educational Tech Ecosystem" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Dilligite Team</h3>
-                            <p>Learning · Product</p>
-                            <div class="achievement-badge">Team</div>
-                        </div>
-                    </div>
-
-                    <!-- Achievement 8 -->
-                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
-                        <div class="card-image">
-                            <img src="images/ac-8.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Sustainable Innovation Lab</h3>
-                            <p>R&D · Environment</p>
-                            <div class="achievement-badge">Research</div>
-                        </div>
-                    </div>
-                    <!-- Achievement 9 -->
-                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
-                        <div class="card-image">
-                            <img src="images/ac-7.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Community Engagement Programs</h3>
-                            <p>Environment</p>
-                            <div class="achievement-badge">Research</div>
-                        </div>
-                    </div>
-                    <!-- Achievement 10 -->
-                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
-                        <div class="card-image">
-                            <img src="images/ac-10.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Sustainable Innovation Lab</h3>
-                            <p>R&D · Environment</p>
-                            <div class="achievement-badge">Research</div>
-                        </div>
-                    </div>
-                     <!-- Achievement 12 -->
-                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
-                        <div class="card-image">
-                            <img src="images/ac-12.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>EDGE</h3>
-                            <p>Workshop</p>
-                            <div class="achievement-badge">Innovation</div>
-                        </div>
-                    </div>
-                    <!-- Achievement 11 -->
-                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
-                        <div class="card-image">
-                            <img src="images/ac-11.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="card-content">
-                            <h3>Community Engagement Programs</h3>
-                            <p>R&D · Environment</p>
-                            <div class="achievement-badge">Community</div>
-                        </div>
-                    </div>
-                   
-                </div>
-            </div>
-
-            <div class="reel-indicators">
-                <div class="scroll-dots" id="scrollDots"></div>
-                <div class="position-indicator">
-                    <span id="currentPosition">1</span> of <span id="totalItems">8</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* ========== PROFESSIONAL ACHIEVEMENTS STYLES ========== */
-    .achievements-section {
+ .testimonials-section {
         padding: 100px 20px;
-            background: linear-gradient(135deg, #010005 0%, #2a4276 100%);
-            position: relative;
-            overflow: hidden;;
-    }
-
-    .achievements-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(135deg, #010005 0%, #2a4276 100%);
-    }
-
-    .container {
-        max-width: 1400px;
-        margin: 0 auto;
-        position: relative;
-    }
-
-    .section-header {
-        text-align: center;
-        margin-bottom: 60px;
-    }
-
-    .section-title {
-        font-size: 3rem;
-        font-weight: 700;
-        background: linear-gradient(135deg, #eceaee 0%, #2575fc 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 16px;
-        letter-spacing: -0.5px;
-    }
-
-    .section-subtitle {
-        font-size: 1.2rem;
-        color: #94a3b8;
-        max-width: 600px;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
-
-    .achievements-reel {
-        position: relative;
-    }
-
-    .reel-controls {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        transform: translateY(-50%);
-        display: flex;
-        justify-content: space-between;
-        padding: 0 20px;
-        z-index: 10;
-        pointer-events: none;
-    }
-
-    .control-btn {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        border: none;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(20px);
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        pointer-events: all;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .control-btn:hover {
-        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-        transform: scale(1.1);
-        box-shadow: 0 10px 30px rgba(106, 17, 203, 0.4);
-    }
-
-    .control-btn:active {
-        transform: scale(0.95);
-    }
-
-    .control-btn:disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-        transform: none;
-    }
-
-    .control-btn:disabled:hover {
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: none;
-    }
-
-    .scroller-container {
-        position: relative;
-        overflow: hidden;
-        border-radius: 24px;
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        padding: 60px 0;
-    }
-
-    .scroller {
-        display: flex;
-        gap: 30px;
-        padding: 0 100px;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        scroll-snap-type: x mandatory;
-    }
-
-    .scroller::-webkit-scrollbar {
-        display: none;
-    }
-
-    .achievement-card {
-        flex: 0 0 380px;
-        height: 480px;
-        border-radius: 20px;
-        overflow: hidden;
-        position: relative;
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        scroll-snap-align: center;
-        transform: scale(0.9);
-        opacity: 0.7;
-        filter: brightness(0.7);
-    }
-
-    .achievement-card.active {
-        transform: scale(1);
-        opacity: 1;
-        filter: brightness(1);
-        border-color: rgba(107, 115, 125, 0.5);
-        box-shadow: 0 25px 50px rgba(45, 125, 199, 0.5);
-    }
-
-    .achievement-card:hover {
-        transform: scale(1.02);
-        border-color: rgba(106, 17, 203, 0.3);
-    }
-
-    .achievement-card.active:hover {
-        transform: scale(1.05);
-    }
-
-    .card-image {
-        position: relative;
-        width: 100%;
-        height: 75%;
-        overflow: hidden;
-    }
-
-    .card-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .achievement-card.active .card-image img {
-        transform: scale(1.1);
-    }
-
-    .image-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-        opacity: 0.7;
-        transition: opacity 0.3s ease;
-    }
-
-    .achievement-card.active .image-overlay {
-        opacity: 0.4;
-    }
-
-    .card-content {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 30px;
-        color: rgb(248, 248, 248);
-        background: linear-gradient(transparent, rgba(11, 14, 54, 0.9));
-        transform: translateY(10px);
-        transition: transform 0.3s ease;
-    }
-
-    .achievement-card.active .card-content {
-        transform: translateY(0);
-    }
-
-    .card-content h3 {
-        font-size: 1.4rem;
-        font-weight: 600;
-        margin-bottom: 8px;
-        line-height: 1.3;
-        color: rgb(248, 248, 248);
-    }
-
-    .card-content p {
-        color: #cbd5e1;
-        font-size: 0.95rem;
-        margin-bottom: 12px;
-        line-height: 1.4;
-    }
-
-    .achievement-badge {
-        display: inline-block;
-        padding: 6px 12px;
-        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .reel-indicators {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 40px;
-    }
-
-    .scroll-dots {
-        display: flex;
-        gap: 2px;
-    }
-
-    .scroll-dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border: none;
-    }
-
-    .scroll-dot.active {
-        background: white;
-        transform: scale(1.2);
-    }
-
-    .position-indicator {
-        color: #f7f8fa;
-        font-size: 0.9rem;
-        font-weight: 500;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-        .section-title {
-            font-size: 2.5rem;
-        }
-
-        .achievement-card {
-            flex: 0 0 340px;
-            height: 440px;
-        }
-
-        .scroller {
-            padding: 0 80px;
-        }
-
-        .reel-controls {
-            padding: 0 10px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .achievements-section {
-            padding: 60px 20px;
-        }
-
-        .section-title {
-            font-size: 2rem;
-        }
-
-        .section-subtitle {
-            font-size: 1.1rem;
-        }
-
-        .achievement-card {
-            flex: 0 0 300px;
-            height: 400px;
-        }
-
-        .scroller {
-            padding: 0 60px;
-            gap: 20px;
-        }
-
-        .control-btn {
-            width: 50px;
-            height: 50px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .section-title {
-            font-size: 1.8rem;
-        }
-
-        .achievement-card {
-            flex: 0 0 280px;
-            height: 380px;
-        }
-
-        .scroller {
-            padding: 0 40px;
-        }
-
-        .card-content {
-            padding: 20px;
-        }
-
-        .card-content h3 {
-            font-size: 1.2rem;
-        }
-
-        .reel-controls {
-            padding: 0 5px;
-        }
-    }
-</style>
-
-<script>
-    // Professional Achievements Reel Functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const scroller = document.getElementById('scroller');
-        const cards = Array.from(scroller.querySelectorAll('.achievement-card'));
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const scrollDots = document.getElementById('scrollDots');
-        const currentPosition = document.getElementById('currentPosition');
-        const totalItems = document.getElementById('totalItems');
-
-        let currentIndex = 0;
-        const cardWidth = cards[0].offsetWidth + 30; // card width + gap
-        const maxIndex = cards.length - 1;
-
-        // Set total items
-        totalItems.textContent = cards.length;
-
-        // Create scroll dots
-        cards.forEach((_, index) => {
-            const dot = document.createElement('button');
-            dot.className = `scroll-dot ${index === 0 ? 'active' : ''}`;
-            dot.setAttribute('aria-label', `Go to achievement ${index + 1}`);
-            dot.addEventListener('click', () => scrollToIndex(index));
-            scrollDots.appendChild(dot);
-        });
-
-        const dots = scrollDots.querySelectorAll('.scroll-dot');
-
-        // Update active card based on scroll position
-        function updateActiveCard() {
-            const scrollerRect = scroller.getBoundingClientRect();
-            const scrollerCenter = scrollerRect.left + scrollerRect.width / 2;
-            
-            let closestCard = null;
-            let closestDistance = Infinity;
-            
-            cards.forEach((card, index) => {
-                const cardRect = card.getBoundingClientRect();
-                const cardCenter = cardRect.left + cardRect.width / 2;
-                const distance = Math.abs(cardCenter - scrollerCenter);
-                
-                if (distance < closestDistance) {
-                    closestDistance = distance;
-                    closestCard = index;
-                }
-                
-                // Remove active class from all cards
-                card.classList.remove('active');
-            });
-            
-            // Add active class to closest card
-            if (closestCard !== null) {
-                cards[closestCard].classList.add('active');
-                currentIndex = closestCard;
-                updateControls();
-            }
-        }
-
-        // Update controls and indicators
-        function updateControls() {
-            prevBtn.disabled = currentIndex === 0;
-            nextBtn.disabled = currentIndex === maxIndex;
-            
-            // Update dots
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
-            });
-            
-            currentPosition.textContent = currentIndex + 1;
-        }
-
-        // Scroll to specific index
-        function scrollToIndex(index) {
-            currentIndex = Math.max(0, Math.min(index, maxIndex));
-            const scrollPosition = currentIndex * cardWidth;
-            
-            scroller.scrollTo({
-                left: scrollPosition,
-                behavior: 'smooth'
-            });
-        }
-
-        // Navigation handlers
-        prevBtn.addEventListener('click', () => {
-            scrollToIndex(currentIndex - 1);
-        });
-
-        nextBtn.addEventListener('click', () => {
-            scrollToIndex(currentIndex + 1);
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                e.preventDefault();
-                scrollToIndex(currentIndex - 1);
-            } else if (e.key === 'ArrowRight') {
-                e.preventDefault();
-                scrollToIndex(currentIndex + 1);
-            }
-        });
-
-        // Update on scroll
-        let scrollTimeout;
-        scroller.addEventListener('scroll', () => {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(updateActiveCard, 100);
-        }, { passive: true });
-
-        // Touch/swipe support
-        let startX = 0;
-        let isSwiping = false;
-
-        scroller.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            isSwiping = true;
-        }, { passive: true });
-
-        scroller.addEventListener('touchmove', (e) => {
-            if (!isSwiping) return;
-            e.preventDefault();
-        });
-
-        scroller.addEventListener('touchend', (e) => {
-            if (!isSwiping) return;
-            
-            const endX = e.changedTouches[0].clientX;
-            const diffX = startX - endX;
-            
-            if (Math.abs(diffX) > 50) {
-                if (diffX > 0) {
-                    scrollToIndex(currentIndex + 1);
-                } else {
-                    scrollToIndex(currentIndex - 1);
-                }
-            }
-            
-            isSwiping = false;
-        }, { passive: true });
-
-        // Initialize
-        updateActiveCard();
-        updateControls();
-
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            setTimeout(updateActiveCard, 100);
-        });
-    });
-</script>
-    <!-- ========== PROFESSIONAL TESTIMONIALS SECTION ========== -->
-<section class="testimonials-section">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Testimonials</span>
-            <h2 class="section-title">What Our Clients Say</h2>
-            <p class="section-subtitle">Hear from professionals who have experienced our exceptional service and results</p>
-        </div>
-
-        <div class="testimonials-container">
-            <div class="testimonials-controls">
-                <button class="control-btn prev-btn" id="testimonialPrevBtn" aria-label="Previous testimonial">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <button class="control-btn next-btn" id="testimonialNextBtn" aria-label="Next testimonial">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </div>
-
-            <div class="testimonials-scroller" id="testimonialsScroller">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                        </svg>
-                    </div>
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"Working with this team has been transformative for our business. Their innovative approach and technical expertise helped us achieve results beyond our expectations."</p>
-                    </div>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="images/arif.jpeg" alt="Arif Khan" />
-                        </div>
-                        <div class="client-details">
-                            <h4 class="client-name">Arif Khan</h4>
-                            <p class="client-position">Marketing Manager</p>
-                            <div class="client-company">Tech Solutions Inc.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                        </svg>
-                    </div>
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"The dedication and professionalism shown by this team is exceptional. They delivered our project on time and exceeded all quality standards we set."</p>
-                    </div>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="images/sobail.webp" alt="Abdullah Sobail" />
-                        </div>
-                        <div class="client-details">
-                            <h4 class="client-name">Abdullah Sobail</h4>
-                            <p class="client-position">Marketing Manager</p>
-                            <div class="client-company">Global Innovations Ltd.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                        </svg>
-                    </div>
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"Outstanding service and remarkable attention to detail. The team's ability to understand our vision and translate it into reality is truly impressive."</p>
-                    </div>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="images/hossain.webp" alt="Mohammed Hossain" />
-                        </div>
-                        <div class="client-details">
-                            <h4 class="client-name">Mohammed Hossain</h4>
-                            <p class="client-position">Marketing Manager</p>
-                            <div class="client-company">Digital Solutions Co.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card">
-                    <div class="quote-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
-                        </svg>
-                    </div>
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"A truly professional team that delivers excellence. Their strategic insights and technical capabilities have significantly impacted our business growth."</p>
-                    </div>
-                    <div class="client-info">
-                        <div class="client-avatar">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Mohammed Ali" />
-                        </div>
-                        <div class="client-details">
-                            <h4 class="client-name">Mohammed Ali</h4>
-                            <p class="client-position">Marketing Manager</p>
-                            <div class="client-company">Innovation Partners</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonials-indicators">
-                <div class="scroll-dots" id="scrollDots"></div>
-                <div class="position-indicator">
-                    <span id="currentTestimonial">1</span> of <span id="totalTestimonials">4</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* ========== PROFESSIONAL TESTIMONIALS STYLES ========== */
-    .testimonials-section {
-        padding: 100px 20px;
-        background: linear-gradient(135deg, #010005 0%, #2a4276 100%);
+        background: #b1b493;
         position: relative;
         overflow: hidden;
     }
@@ -1919,139 +678,929 @@ nav.scrolled {
             height: 60px;
         }
     }
-</style>
+.achievements-section {
+        padding: 100px 20px;
+            background:linear-gradient(135deg, #f7f7f4 0%, #b1b493 100%);
+            position: relative;
+            overflow: hidden;;
+    }
 
-<script>
-    // Professional Testimonials Functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        const scroller = document.getElementById('testimonialsScroller');
-        const cards = Array.from(scroller.querySelectorAll('.testimonial-card'));
-        const prevBtn = document.getElementById('testimonialPrevBtn');
-        const nextBtn = document.getElementById('testimonialNextBtn');
-        const scrollDots = document.getElementById('scrollDots');
-        const currentTestimonial = document.getElementById('currentTestimonial');
-        const totalTestimonials = document.getElementById('totalTestimonials');
+    .achievements-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(135deg, #010005 0%, #2a4276 100%);
+    }
 
-        let currentIndex = 0;
-        const cardWidth = cards[0].offsetWidth + 30; // card width + gap
-        const maxIndex = cards.length - 1;
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+    }
 
-        // Set total testimonials
-        totalTestimonials.textContent = cards.length;
+    .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
 
-        // Create scroll dots
-        cards.forEach((_, index) => {
-            const dot = document.createElement('button');
-            dot.className = `scroll-dot ${index === 0 ? 'active' : ''}`;
-            dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
-            dot.addEventListener('click', () => scrollToIndex(index));
-            scrollDots.appendChild(dot);
-        });
+    .section-title {
+        font-size: 3rem;
+        font-weight: 700;
+        background: #fff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 16px;
+        letter-spacing: -0.5px;
+    }
 
-        const dots = scrollDots.querySelectorAll('.scroll-dot');
+    .section-subtitle {
+        font-size: 1.2rem;
+        color: #fbfbfc;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
 
-        // Update controls and indicators
-        function updateControls() {
-            prevBtn.disabled = currentIndex === 0;
-            nextBtn.disabled = currentIndex === maxIndex;
-            
-            // Update dots
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
-            });
-            
-            currentTestimonial.textContent = currentIndex + 1;
+    .achievements-reel {
+        position: relative;
+    }
+
+    .reel-controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    .control-btn {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: all;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .control-btn:hover {
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        transform: scale(1.1);
+        box-shadow: 0 10px 30px rgba(106, 17, 203, 0.4);
+    }
+
+    .control-btn:active {
+        transform: scale(0.95);
+    }
+
+    .control-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .control-btn:disabled:hover {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+    }
+
+    .scroller-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 60px 0;
+    }
+
+    .scroller {
+        display: flex;
+        gap: 30px;
+        padding: 0 100px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-snap-type: x mandatory;
+    }
+
+    .scroller::-webkit-scrollbar {
+        display: none;
+    }
+
+    .achievement-card {
+        flex: 0 0 380px;
+        height: 480px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        scroll-snap-align: center;
+        transform: scale(0.9);
+        opacity: 0.7;
+        filter: brightness(0.7);
+    }
+
+    .achievement-card.active {
+        transform: scale(1);
+        opacity: 1;
+        filter: brightness(1);
+        border-color: rgba(107, 115, 125, 0.5);
+        box-shadow: 0 25px 50px rgba(45, 125, 199, 0.5);
+    }
+
+    .achievement-card:hover {
+        transform: scale(1.02);
+        border-color: rgba(106, 17, 203, 0.3);
+    }
+
+    .achievement-card.active:hover {
+        transform: scale(1.05);
+    }
+
+    .card-image {
+        position: relative;
+        width: 100%;
+        height: 75%;
+        overflow: hidden;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .achievement-card.active .card-image img {
+        transform: scale(1.1);
+    }
+
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+
+    .achievement-card.active .image-overlay {
+        opacity: 0.4;
+    }
+
+    .card-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px;
+        color: rgb(248, 248, 248);
+        background: linear-gradient(transparent, rgba(11, 14, 54, 0.9));
+        transform: translateY(10px);
+        transition: transform 0.3s ease;
+    }
+
+    .achievement-card.active .card-content {
+        transform: translateY(0);
+    }
+
+    .card-content h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        line-height: 1.3;
+        color: rgb(248, 248, 248);
+    }
+
+    .card-content p {
+        color: #cbd5e1;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+
+    .achievement-badge {
+        display: inline-block;
+        padding: 6px 12px;
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .reel-indicators {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .scroll-dots {
+        display: flex;
+        gap: 2px;
+    }
+
+    .scroll-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+    }
+
+    .scroll-dot.active {
+        background: white;
+        transform: scale(1.2);
+    }
+
+    .position-indicator {
+        color: #f7f8fa;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .section-title {
+            font-size: 2.5rem;
         }
 
-        // Scroll to specific index
-        function scrollToIndex(index) {
-            currentIndex = Math.max(0, Math.min(index, maxIndex));
-            const scrollPosition = currentIndex * cardWidth;
-            
-            scroller.scrollTo({
-                left: scrollPosition,
-                behavior: 'smooth'
-            });
-            
-            updateControls();
+        .achievement-card {
+            flex: 0 0 340px;
+            height: 440px;
         }
 
-        // Navigation handlers
-        prevBtn.addEventListener('click', () => {
-            scrollToIndex(currentIndex - 1);
-        });
-
-        nextBtn.addEventListener('click', () => {
-            scrollToIndex(currentIndex + 1);
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                e.preventDefault();
-                scrollToIndex(currentIndex - 1);
-            } else if (e.key === 'ArrowRight') {
-                e.preventDefault();
-                scrollToIndex(currentIndex + 1);
-            }
-        });
-
-        // Update current index based on scroll position
-        function updateCurrentIndex() {
-            const scrollLeft = scroller.scrollLeft;
-            const newIndex = Math.round(scrollLeft / cardWidth);
-            
-            if (newIndex !== currentIndex) {
-                currentIndex = newIndex;
-                updateControls();
-            }
+        .scroller {
+            padding: 0 80px;
         }
 
-        // Throttled scroll handler
-        let scrollTimeout;
-        scroller.addEventListener('scroll', () => {
-            clearTimeout(scrollTimeout);
-            scrollTimeout = setTimeout(updateCurrentIndex, 100);
-        }, { passive: true });
+        .reel-controls {
+            padding: 0 10px;
+        }
+    }
 
-        // Touch/swipe support
-        let startX = 0;
-        let isSwiping = false;
+    @media (max-width: 768px) {
+        .achievements-section {
+            padding: 60px 20px;
+        }
 
-        scroller.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            isSwiping = true;
-        }, { passive: true });
+        .section-title {
+            font-size: 2rem;
+        }
 
-        scroller.addEventListener('touchmove', (e) => {
-            if (!isSwiping) return;
-            e.preventDefault();
-        });
+        .section-subtitle {
+            font-size: 1.1rem;
+        }
 
-        scroller.addEventListener('touchend', (e) => {
-            if (!isSwiping) return;
-            
-            const endX = e.changedTouches[0].clientX;
-            const diffX = startX - endX;
-            
-            if (Math.abs(diffX) > 50) {
-                if (diffX > 0) {
-                    scrollToIndex(currentIndex + 1);
-                } else {
-                    scrollToIndex(currentIndex - 1);
-                }
-            }
-            
-            isSwiping = false;
-        }, { passive: true });
+        .achievement-card {
+            flex: 0 0 300px;
+            height: 400px;
+        }
 
-        // Initialize
-        updateControls();
-    });
-</script>
-   <!-- ========== PROFESSIONAL FOOTER ========== -->
+        .scroller {
+            padding: 0 60px;
+            gap: 20px;
+        }
 
-<!--footer-->
+        .control-btn {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .section-title {
+            font-size: 1.8rem;
+        }
+
+        .achievement-card {
+            flex: 0 0 280px;
+            height: 380px;
+        }
+
+        .scroller {
+            padding: 0 40px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+        }
+
+        .reel-controls {
+            padding: 0 5px;
+        }
+    }
+/* Footer Base */
+/* Social & Contact Icons */
+.footer-column.about .social-links a,
+.footer-column.contact i {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 20px;
+  color: #e2e8f0;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* Hover Effects for Social Icons */
+.footer-column.about .social-links a:hover {
+  color: #6a11cb;
+  transform: translateY(-5px) rotate(-10deg) scale(1.3);
+  text-shadow: 0 0 10px rgba(106,17,203,0.6),
+               0 0 20px rgba(38,117,252,0.6);
+}
+
+/* Animated Pulse Effect */
+.footer-column.about .social-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: scale(0);
+  background: rgba(106,17,203,0.2);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.footer-column.about .social-links a:hover::after {
+  transform: scale(2);
+  opacity: 0;
+}
+
+/* Hover Effect for Contact Icons */
+.footer-column.contact i {
+  color: #6a11cb;
+  transition: all 0.4s ease;
+}
+
+.footer-column.contact i:hover {
+  transform: scale(1.3) rotate(-10deg);
+  text-shadow: 0 0 10px rgba(106,17,203,0.6),
+               0 0 15px rgba(38,117,252,0.6);
+  cursor: pointer;
+}
+
+/* Newsletter Button Glow on Hover */
+.newsletter-form button:hover {
+  box-shadow: 0 0 15px rgba(106,17,203,0.6),
+              0 0 25px rgba(38,117,252,0.6);
+}
+
+.footer {
+  background: #232931;
+  color: #e2e8f0;
+  padding: 60px 20px 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Column Titles */
+.footer-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+}
+
+.footer-column h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  border-radius: 3px;
+}
+
+/* About Text */
+.footer-column.about p {
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+/* Social Icons */
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #e2e8f0;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #6a11cb;
+  transform: translateY(-3px);
+}
+
+/* Quick Links */
+.footer-column.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column.links ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column.links ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-column.links ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  transition: width 0.3s ease;
+}
+
+.footer-column.links ul li a:hover::after {
+  width: 100%;
+}
+
+/* Contact Column */
+.footer-column.contact p {
+  margin-bottom: 10px;
+  color: #cbd5e1;
+}
+
+.footer-column.contact i {
+  margin-right: 10px;
+  color: #6a11cb;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    gap: 30px;
+  }
+}
+/* Newsletter Column */
+.footer-column.newsletter p {
+  margin-bottom: 15px;
+  color: #cbd5e1;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form input[type="email"]:focus {
+  box-shadow: 0 0 0 3px rgba(106,17,203,0.4);
+}
+
+.newsletter-form button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+}
+
+/* Responsive Footer Grid */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+  </style>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	
+	 <!-- home -->
+	<!-- ✅ Updated Navbar -->
+ <!-- home -->
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+ <a href="index.html" class="navbar-brand">
+      <img src="images/logo.jpeg" alt="Logo" class="logo">
+    </a>
+
+			<button class="menu-toggle" type="button">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</button>
+ <!-- 🌙 Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-btn">
+      <i class="fas fa-moon"></i>
+    </button>
+
+
+			<div id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="index.html" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="about.html" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="skills.html" class="nav-link"><span>Skills</span></a></li> 
+					<li class="nav-item"><a href="projects.html" class="nav-link"><span>Achievements</span></a></li> 
+					<li class="nav-item"><a href="contact.html" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+       
+
+			</div>
+		</div>
+	</nav>
+   <!-- ========== ACHIEVEMENTS HERO ========== -->
+<section class="achievements-section">
+  <div class="container-fluid px-md-4">
+    <div class="row justify-content-center pb-5 heading-section">
+      <div class="col-md-12 ftco-animate text-center">
+        <span class="subheading">Executive</span>
+        <h2 class="mb-4 text-gradient">Achievements</h2>
+        <p class="heading-description">
+          A showcase of transformative projects that blend innovation, technology, and creativity.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROFESSIONAL ACHIEVEMENTS SECTION ========== -->
+
+<section class="achievements-section">
+    <div class="">
+       
+        <div class="achievements-reel">
+            <div class="reel-controls">
+                <button class="control-btn prev-btn" id="prevBtn" aria-label="Previous achievements">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="control-btn next-btn" id="nextBtn" aria-label="Next achievements">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="scroller-container">
+                <div class="scroller" id="achievementCarousel">
+                    <!-- Achievement 1 -->
+                    <div class="achievement-card" data-title="Innovative Career Solutions">
+                        <div class="card-image">
+                            <img src="images/ceo.png" alt="Innovative Career Solutions" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Innovative Career Solutions</h3>
+                            <p>Technology · Career Development</p>
+                            <div class="achievement-badge">Achievement</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 2 -->
+                    <div class="achievement-card" data-title="Transformative Tech Initiatives">
+                        <div class="card-image">
+                            <img src="images/ac-2.webp" alt="Transformative Tech Initiatives" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Transformative Tech Initiatives</h3>
+                            <p>Innovation · Research</p>
+                            <div class="achievement-badge">Community</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 3 -->
+                    <div class="achievement-card" data-title="Community Engagement Programs">
+                        <div class="card-image">
+                            <img src="images/ac-3.webp" alt="Community Engagement Programs" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Community Engagement Programs</h3>
+                            <p>Impact · Outreach</p>
+                            <div class="achievement-badge">Community</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 4 -->
+                    <div class="achievement-card" data-title="Leveraging Technology">
+                        <div class="card-image">
+                            <img src="images/ac-4.jpeg" alt="Leveraging Technology" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Leveraging Technology</h3>
+                            <p>Solutions · Growth</p>
+                            <div class="achievement-badge">Innovation</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 5 -->
+                    <div class="achievement-card" data-title="Enhancing Lives & Creating Jobs">
+                        <div class="card-image">
+                            <img src="images/ac-5.jpeg" alt="Enhancing Lives & Creating Jobs" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Enhancing Lives & Creating Jobs</h3>
+                            <p>Jobs · Sustainability</p>
+                            <div class="achievement-badge">Impact</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 6 -->
+                    <div class="achievement-card" data-title="Data-Driven Platforms">
+                        <div class="card-image">
+                            <img src="images/ac-6.jpeg" alt="Data-Driven Platforms" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Data-Driven Platforms</h3>
+                            <p>Analytics · Scale</p>
+                            <div class="achievement-badge">Technology</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 7 -->
+                    <div class="achievement-card" data-title="Educational Tech Ecosystem">
+                        <div class="card-image">
+                            <img src="images/ac-9.jpeg" alt="Educational Tech Ecosystem" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Dilligite Team</h3>
+                            <p>Learning · Product</p>
+                            <div class="achievement-badge">Team</div>
+                        </div>
+                    </div>
+
+                    <!-- Achievement 8 -->
+                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
+                        <div class="card-image">
+                            <img src="images/ac-8.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Sustainable Innovation Lab</h3>
+                            <p>R&D · Environment</p>
+                            <div class="achievement-badge">Research</div>
+                        </div>
+                    </div>
+                    <!-- Achievement 9 -->
+                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
+                        <div class="card-image">
+                            <img src="images/ac-7.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Community Engagement Programs</h3>
+                            <p>Environment</p>
+                            <div class="achievement-badge">Research</div>
+                        </div>
+                    </div>
+                    <!-- Achievement 10 -->
+                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
+                        <div class="card-image">
+                            <img src="images/ac-10.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Sustainable Innovation Lab</h3>
+                            <p>R&D · Environment</p>
+                            <div class="achievement-badge">Research</div>
+                        </div>
+                    </div>
+                     <!-- Achievement 12 -->
+                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
+                        <div class="card-image">
+                            <img src="images/ac-12.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>EDGE</h3>
+                            <p>Workshop</p>
+                            <div class="achievement-badge">Innovation</div>
+                        </div>
+                    </div>
+                    <!-- Achievement 11 -->
+                    <div class="achievement-card" data-title="Sustainable Innovation Lab">
+                        <div class="card-image">
+                            <img src="images/ac-11.jpeg" alt="Sustainable Innovation Lab" loading="eager" />
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="card-content">
+                            <h3>Community Engagement Programs</h3>
+                            <p>R&D · Environment</p>
+                            <div class="achievement-badge">Community</div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="reel-indicators">
+                <div class="scroll-dots" id="achievementDots"></div>
+                <div class="position-indicator">
+                    <span id="achievementCurrent">1</span> of <span id="achievementTotal">8</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ========== PROFESSIONAL TESTIMONIALS SECTION ========== -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Testimonials</span>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Hear from professionals who have experienced our exceptional service and results</p>
+        </div>
+
+        <div class="testimonials-container">
+            <div class="testimonials-controls">
+                <button class="control-btn prev-btn" id="testimonialPrevBtn" aria-label="Previous testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="control-btn next-btn" id="testimonialNextBtn" aria-label="Next testimonial">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="testimonials-scroller" id="testimonialCarousel">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Working with this team has been transformative for our business. Their innovative approach and technical expertise helped us achieve results beyond our expectations."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="images/arif.jpeg" alt="Arif Khan" />
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">Arif Khan</h4>
+                            <p class="client-position">Marketing Manager</p>
+                            <div class="client-company">Tech Solutions Inc.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"The dedication and professionalism shown by this team is exceptional. They delivered our project on time and exceeded all quality standards we set."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="images/sobail.webp" alt="Abdullah Sobail" />
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">Abdullah Sobail</h4>
+                            <p class="client-position">Marketing Manager</p>
+                            <div class="client-company">Global Innovations Ltd.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Outstanding service and remarkable attention to detail. The team's ability to understand our vision and translate it into reality is truly impressive."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="images/hossain.webp" alt="Mohammed Hossain" />
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">Mohammed Hossain</h4>
+                            <p class="client-position">Marketing Manager</p>
+                            <div class="client-company">Digital Solutions Co.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="quote-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+                        </svg>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"A truly professional team that delivers excellence. Their strategic insights and technical capabilities have significantly impacted our business growth."</p>
+                    </div>
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Mohammed Ali" />
+                        </div>
+                        <div class="client-details">
+                            <h4 class="client-name">Mohammed Ali</h4>
+                            <p class="client-position">Marketing Manager</p>
+                            <div class="client-company">Innovation Partners</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-indicators">
+                <div class="scroll-dots" id="testimonialDots"></div>
+                <div class="position-indicator">
+                    <span id="testimonialCurrent">1</span> of <span id="testimonialTotal">4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <!--footer-->
 	<!-- Modern Footer with Newsletter -->
 <footer class="footer">
   <div class="footer-container">
@@ -2064,9 +1613,9 @@ nav.scrolled {
       </p>
       <div class="social-links">
         <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.facebook.com/share/1PeQeRikT1/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://mdmosharrafhossain.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
 
@@ -2107,134 +1656,289 @@ nav.scrolled {
   </div>
 </footer>
 
+
+		
+		<!-- loader -->
+		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+		<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+
 <script>
-    // Set current year in copyright
-    document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
+// ====================== Footer Year ======================
+document.getElementById("year").innerText = new Date().getFullYear();
+
+// ====================== Navbar Toggle ======================
+const toggleBtn = document.querySelector(".menu-toggle");
+const navCollapse = document.getElementById("ftco-nav");
+
+toggleBtn.addEventListener("click", function () {
+    this.classList.toggle("active");
+    navCollapse.classList.toggle("show");
+});
+
+// ====================== Counter Animation ======================
+const counters = document.querySelectorAll('.number');
+counters.forEach(counter => {
+    counter.innerText = '0';
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = target / 200;
+        if (current < target) {
+            counter.innerText = `${Math.ceil(current + increment)}`;
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+    updateCounter();
+});
+
+// ====================== Theme Toggle ======================
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+ themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+
+}
+
+themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    if (body.classList.contains("dark-mode")) {
+             themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        localStorage.setItem("theme", "dark");
+    } else {
+         themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        localStorage.setItem("theme", "light");
+    }
+});
+
+
+// ====================== Achievements Carousel ======================
+document.addEventListener('DOMContentLoaded', function () {
+    const scroller = document.getElementById('achievementCarousel');
+    const cards = Array.from(scroller.querySelectorAll('.achievement-card'));
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const scrollDots = document.getElementById('achievementDots');
+    const currentPosition = document.getElementById('achievementCurrent');
+    const totalItems = document.getElementById('achievementTotal');
+
+    let currentIndex = 0;
+    const cardGap = 30; // matches your CSS spacing
+    let cardWidth = cards[0].offsetWidth + cardGap;
+    const maxIndex = cards.length - 1;
+
+    totalItems.textContent = cards.length;
+
+    // Create scroll dots dynamically
+    cards.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = `scroll-dot ${index === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Go to achievement ${index + 1}`);
+        dot.addEventListener('click', () => scrollToIndex(index));
+        scrollDots.appendChild(dot);
     });
-</script>
-    <!-- ========== SCRIPTS ========== -->
-    <div id="ftco-loader" class="show fullscreen">
-        <svg class="circular" width="48px" height="48px">
-            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
-        </svg>
-    </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
+    const dots = scrollDots.querySelectorAll('.scroll-dot');
 
-    <script>
-        // Mobile Navigation Toggle
-        const toggleBtn = document.querySelector(".menu-toggle");
-        const navCollapse = document.getElementById("ftco-nav");
+    function updateActiveCard() {
+        const scrollerRect = scroller.getBoundingClientRect();
+        const scrollerCenter = scrollerRect.left + scrollerRect.width / 2;
 
-        toggleBtn.addEventListener("click", function () {
-            this.classList.toggle("active");
-            navCollapse.classList.toggle("show");
+        let closestCard = 0;
+        let closestDistance = Infinity;
+
+        cards.forEach((card, index) => {
+            const cardRect = card.getBoundingClientRect();
+            const cardCenter = cardRect.left + cardRect.width / 2;
+            const distance = Math.abs(cardCenter - scrollerCenter);
+            card.classList.remove('active');
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestCard = index;
+            }
         });
 
-        // Horizontal Reel Functionality
-        (function(){
-            const scroller = document.getElementById('scroller');
-            const cards = Array.from(scroller.querySelectorAll('.card'));
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
+        cards[closestCard].classList.add('active');
+        currentIndex = closestCard;
+        updateControls();
+    }
 
-            // Parameters for scaling
-            const minScale = 0.8;
-            const maxScale = 1.0;
-            const activateThreshold = 0.14;
+    function updateControls() {
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === maxIndex;
+        dots.forEach((dot, index) => dot.classList.toggle('active', index === currentIndex));
+        currentPosition.textContent = currentIndex + 1;
+    }
 
-            // Lazy load images
-            const lazyObserver = new IntersectionObserver((entries, obs) => {
-                for(const e of entries){
-                    if(e.isIntersecting){
-                        const img = e.target.querySelector('img');
-                        if(img && img.dataset && img.dataset.src && !img.src){
-                            img.src = img.dataset.src;
-                        }
-                        obs.unobserve(e.target);
-                    }
-                }
-            }, { root: scroller, rootMargin: '200px', threshold: 0.05 });
+    function scrollToIndex(index) {
+        currentIndex = Math.max(0, Math.min(index, maxIndex));
+        scroller.scrollTo({
+            left: currentIndex * cardWidth,
+            behavior: 'smooth'
+        });
+        updateActiveCard();
+    }
 
-            cards.forEach(card => lazyObserver.observe(card));
+    prevBtn.addEventListener('click', () => scrollToIndex(currentIndex - 1));
+    nextBtn.addEventListener('click', () => scrollToIndex(currentIndex + 1));
 
-            // Smooth scaling
-            let ticking = false;
-            function onScroll(){
-                if(!ticking){
-                    requestAnimationFrame(() => {
-                        updateScales();
-                        ticking = false;
-                    });
-                    ticking = true;
-                }
+    // Arrow key navigation
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft') scrollToIndex(currentIndex - 1);
+        if (e.key === 'ArrowRight') scrollToIndex(currentIndex + 1);
+    });
+
+    // Update active card on scroll
+    let scrollTimeout;
+    scroller.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateActiveCard, 100);
+    }, { passive: true });
+
+    // Swipe support for touch devices
+    let startX = 0, isSwiping = false;
+    scroller.addEventListener('touchstart', e => { startX = e.touches[0].clientX; isSwiping = true; }, { passive: true });
+    scroller.addEventListener('touchend', e => {
+        if (!isSwiping) return;
+        const diffX = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diffX) > 50) scrollToIndex(diffX > 0 ? currentIndex + 1 : currentIndex - 1);
+        isSwiping = false;
+    }, { passive: true });
+
+    // Recalculate card width on resize
+    window.addEventListener('resize', () => {
+        cardWidth = cards[0].offsetWidth + cardGap;
+        setTimeout(updateActiveCard, 100);
+    });
+
+    // Initial setup
+    updateActiveCard();
+});
+
+
+// ====================== Testimonials Carousel ======================
+document.addEventListener('DOMContentLoaded', function () {
+    const scroller = document.getElementById('testimonialCarousel');
+    const cards = Array.from(scroller.querySelectorAll('.testimonial-card'));
+    const prevBtn = document.getElementById('testimonialPrevBtn');
+    const nextBtn = document.getElementById('testimonialNextBtn');
+    const scrollDots = document.getElementById('testimonialDots');
+    const currentPosition = document.getElementById('testimonialCurrent');
+    const totalItems = document.getElementById('testimonialTotal');
+
+    let currentIndex = 0;
+    const cardGap = 30; // Adjust if needed
+    let cardWidth = cards[0].offsetWidth + cardGap;
+    const maxIndex = cards.length - 1;
+
+    totalItems.textContent = cards.length;
+
+    // Create scroll dots dynamically
+    cards.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = `scroll-dot ${index === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+        dot.addEventListener('click', () => scrollToIndex(index));
+        scrollDots.appendChild(dot);
+    });
+
+    const dots = scrollDots.querySelectorAll('.scroll-dot');
+
+    function updateActiveCard() {
+        const scrollerRect = scroller.getBoundingClientRect();
+        const scrollerCenter = scrollerRect.left + scrollerRect.width / 2;
+
+        let closestCard = 0;
+        let closestDistance = Infinity;
+
+        cards.forEach((card, index) => {
+            const cardRect = card.getBoundingClientRect();
+            const cardCenter = cardRect.left + cardRect.width / 2;
+            const distance = Math.abs(cardCenter - scrollerCenter);
+            card.classList.remove('active');
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestCard = index;
             }
+        });
 
-            scroller.addEventListener('scroll', onScroll, { passive: true });
-            window.addEventListener('resize', () => requestAnimationFrame(updateScales));
+        cards[closestCard].classList.add('active');
+        currentIndex = closestCard;
+        updateControls();
+    }
 
-            function updateScales(){
-                const rect = scroller.getBoundingClientRect();
-                const centerX = rect.left + rect.width / 2;
+    function updateControls() {
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === maxIndex;
+        dots.forEach((dot, index) => dot.classList.toggle('active', index === currentIndex));
+        currentPosition.textContent = currentIndex + 1;
+    }
 
-                cards.forEach(card => {
-                    const cRect = card.getBoundingClientRect();
-                    const cardCenter = cRect.left + cRect.width / 2;
-                    const distance = Math.abs(cardCenter - centerX);
-                    const maxDist = rect.width / 2 + cRect.width;
-                    const norm = Math.min(1, distance / maxDist);
-                    const scale = maxScale - (maxScale - minScale) * norm;
-                    
-                    card.style.transform = `translateY(${ -6 * (1 - norm) }px) scale(${scale.toFixed(4)})`;
-                    
-                    const fraction = distance / rect.width;
-                    if(fraction < activateThreshold){
-                        card.classList.add('center');
-                    } else {
-                        card.classList.remove('center');
-                    }
-                });
-            }
+    function scrollToIndex(index) {
+        currentIndex = Math.max(0, Math.min(index, maxIndex));
+        scroller.scrollTo({
+            left: currentIndex * cardWidth,
+            behavior: 'smooth'
+        });
+        updateActiveCard();
+    }
 
-            // Initial update
-            updateScales();
+    prevBtn.addEventListener('click', () => scrollToIndex(currentIndex - 1));
+    nextBtn.addEventListener('click', () => scrollToIndex(currentIndex + 1));
 
-            // Arrow navigation
-            function getScrollStep(){
-                const s = cards[0].getBoundingClientRect().width + parseInt(getComputedStyle(scroller).gap || getComputedStyle(scroller).columnGap || 18);
-                return s;
-            }
+    // Arrow key navigation
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft') scrollToIndex(currentIndex - 1);
+        if (e.key === 'ArrowRight') scrollToIndex(currentIndex + 1);
+    });
 
-            prevBtn.addEventListener('click', () => {
-                scroller.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
-            });
-            
-            nextBtn.addEventListener('click', () => {
-                scroller.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
-            });
+    // Update active card on scroll
+    let scrollTimeout;
+    scroller.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(updateActiveCard, 100);
+    }, { passive: true });
 
-            // Keyboard support
-            scroller.addEventListener('keydown', (e) => {
-                if(e.key === 'ArrowRight') { 
-                    e.preventDefault(); 
-                    scroller.scrollBy({ left: getScrollStep(), behavior: 'smooth' }); 
-                }
-                if(e.key === 'ArrowLeft') { 
-                    e.preventDefault(); 
-                    scroller.scrollBy({ left: -getScrollStep(), behavior: 'smooth' }); 
-                }
+    // Swipe support
+    let startX = 0, isSwiping = false;
+    scroller.addEventListener('touchstart', e => { startX = e.touches[0].clientX; isSwiping = true; }, { passive: true });
+    scroller.addEventListener('touchend', e => {
+        if (!isSwiping) return;
+        const diffX = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diffX) > 50) scrollToIndex(diffX > 0 ? currentIndex + 1 : currentIndex - 1);
+        isSwiping = false;
+    }, { passive: true });
+
+    // Recalculate card width on resize
+    window.addEventListener('resize', () => {
+        cardWidth = cards[0].offsetWidth + cardGap;
+        setTimeout(updateActiveCard, 100);
+    });
+
+    // Initial setup
+    updateActiveCard();
+});
+
+
+</script>
+
+	</body>
+	</html>
