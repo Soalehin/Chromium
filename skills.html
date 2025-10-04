@@ -20,26 +20,87 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Styles -->
   <style>
-    :root {
-      --primary: #6a11cb;
-      --secondary: #2575fc;
-      --bg-dark: #40485b;
-      --text-light: #d4dae0;
-	   --card-bg: rgba(127, 119, 157, 0.7); 
-    }
+    /* Default Light Theme */
+:root {
+  --primary: #6a11cb;
+  --secondary: #2575fc;
+  --bg-dark: #ffffff;
+  --text-light: #0f172a;
+}
+/* Dark Mode Theme */
+body.dark-mode {
+  --primary: #ff4d6d;
+  --secondary: #ff6f91;
+  --bg-dark: #0f172a;
+  --text-light: #e2e8f0;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+/* Dark Mode Override */
+body.dark-mode .intro-section {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+}
+
+body.dark-mode .intro-section::before {
+  background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(30,41,59,0.8));
+}
+body.dark-mode .intro-box .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body.dark-mode .intro-box .btn-primary {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.dark-mode .intro-box .btn-primary:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(38,117,252,0.4);
+}
+body.dark-mode .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    font-size: 14px;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+    font-weight: 600;
+    opacity: 1 !important;
+    text-transform: uppercase;
+}
+/* Toggle button styles */
+.theme-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+  color: var(--text-light);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.theme-btn:hover {
+  transform: rotate(20deg) scale(1.2);
+  color: var(--primary);
+}
+
+
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-     /* Gradient deep blue background */
-background: linear-gradient(135deg, #0f213e, #020811); /* dark gradient */
-  color: var(--text-light);
-      overflow-x: hidden;
     }
 body, html {
   margin: 0;
@@ -283,7 +344,8 @@ nav.scrolled {
   from { opacity: 0; transform: translateY(-10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
- 
+
+
     /* Hero Section */
     .hero {
       height: 100vh;
@@ -397,7 +459,9 @@ nav.scrolled {
   font-size: 0.95rem;
   opacity: 0.85;
 }
-
+.bg-light {
+    background: linear-gradient(135deg, #f7f7f4 0%, #b1b493 100%)!important;
+}
 
 /* Responsive tweaks */
 @media (max-width: 992px) {
@@ -466,7 +530,7 @@ nav.scrolled {
 }
 
 .footer {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background: #232931;
   color: #e2e8f0;
   padding: 60px 20px 30px;
   font-family: 'Poppins', sans-serif;
@@ -632,7 +696,7 @@ nav.scrolled {
     padding-bottom: .7rem;
     padding-left: 20px;
     padding-right: 20px;
-    color: #ebe5e5;
+    color: #0e0e0e;
     font-weight: 600;
     opacity: 1 !important;
     text-transform: uppercase;
@@ -657,6 +721,11 @@ nav.scrolled {
   <span class="bar"></span>
 </button>
 
+ <!-- 🌙 Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-btn">
+      <i class="fas fa-moon"></i>
+    </button>
+
 
 			<div id="ftco-nav">
 				<ul class="navbar-nav nav ml-auto">
@@ -675,8 +744,10 @@ nav.scrolled {
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-12 heading-section text-center ftco-animate mb-5">
-  <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize; color: #f7f2f2;">Skills</h2>
-  <h3 class="mb-4" style="font-size: 18px; font-weight: 400; font-style: normal; color: #e8edf1;">
+  <h2 class="mb-4" style="font-size: 34px; text-transform: capitalize; color:
+  #b1b493;">Skills</h2>
+  <h3 class="mb-4" style="font-size: 18px; font-weight: 400; font-style: normal; color: 
+    #b1b493;">
     "My expertise bridges development and management, driving innovation and results."
   </h3>
 </div>
@@ -924,6 +995,32 @@ nav.scrolled {
     navCollapse.classList.toggle("show"); // show/hide nav menu
   });
 </script>
+<script>
+// Dark/Light Mode Toggle
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Load saved theme preference
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
+
+// Toggle on click
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    localStorage.setItem("theme", "dark");
+  } else {
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    localStorage.setItem("theme", "light");
+  }
+});
+</script>
+
 
 
 	</body>
