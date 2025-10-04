@@ -13,18 +13,81 @@
 
   <style>
     /* ================= ROOT & RESET ================= */
-    :root {
-      --primary: #6a11cb;
-      --secondary: #2575fc;
-      --bg-dark: #0f172a;
-      --text-light: #e2e8f0;
-      --card-bg: rgba(255,255,255,0.05);
-      --glass-blur: 12px;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-    body { background: var(--bg-dark); color: var(--text-light); overflow-x: hidden; }
-    @keyframes fadeIn { 0% { opacity:0; transform: translateY(20px); } 100% { opacity:1; transform: translateY(0); } }
-   
+    /* Default Light Theme */
+:root {
+  --primary: #6a11cb;
+  --secondary: #2575fc;
+  --bg-dark: #ffffff;
+  --text-light: #0f172a;
+}
+/* Dark Mode Theme */
+body.dark-mode {
+  --primary: #ff4d6d;
+  --secondary: #ff6f91;
+  --bg-dark: #0f172a;
+  --text-light: #e2e8f0;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+/* Dark Mode Override */
+body.dark-mode .intro-section {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #e2e8f0;
+}
+
+body.dark-mode .intro-section::before {
+  background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(30,41,59,0.8));
+}
+body.dark-mode .intro-box .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+body.dark-mode .intro-box .btn-primary {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+body.dark-mode .intro-box .btn-primary:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(38,117,252,0.4);
+}
+body.dark-mode .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    font-size: 14px;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+    font-weight: 600;
+    opacity: 1 !important;
+    text-transform: uppercase;
+}
+/* Toggle button styles */
+.theme-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 15px;
+  color: var(--text-light);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.theme-btn:hover {
+  transform: rotate(20deg) scale(1.2);
+  color: var(--primary);
+}
+
+
 .footer-grid {
   grid-template-columns: 1fr 1fr; /* 2 per row on tablets */
 }
@@ -407,6 +470,11 @@ nav ul li a.active {
   <div class="navbar-brand">
    <img src="images/logo.jpeg" alt="Logo" class="logo">
   </div>
+
+   <!-- 🌙 Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-btn">
+      <i class="fas fa-moon"></i>
+    </button>  
 
   <!-- Navbar Menu -->
   <ul id="ftco-nav">
@@ -1359,3 +1427,29 @@ nav ul li a.active {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 </script>
+<script>
+// Dark/Light Mode Toggle
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Load saved theme preference
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
+
+// Toggle on click
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    localStorage.setItem("theme", "dark");
+  } else {
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    localStorage.setItem("theme", "light");
+  }
+});
+</script>
+
