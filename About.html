@@ -29,6 +29,11 @@
   --bg-dark: #ffffff;
   --text-light: #0f172a;
 }
+  body {
+      background: #fff;
+      color:#0b0c0d;
+      overflow-x: hidden;
+    }
 /* Dark Mode Theme */
 body.dark-mode {
   --primary: #ff4d6d;
@@ -55,6 +60,13 @@ body.dark-mode .intro-box .section-title {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+body.dark-mode .about .intro-header h1 {
+      font-size: 3.5rem;
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      color:  #b1b493;
+    }
 body.dark-mode .intro-box .btn-primary {
   display: inline-block;
   padding: 12px 30px;
@@ -81,11 +93,23 @@ body.dark-mode .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     opacity: 1 !important;
     text-transform: uppercase;
 }
-  body.dark-mode .about {
-      background: #111827;
-      color: #fff;
-      padding-top: 120px;
-      padding-bottom: 120px;
+body.dark-mode   .about .profile-section .profile-meta .location {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      color: #adaa80;
+    }
+ body.dark-mode  .about .intro-header .subtitle {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color:#adaa80;
+      margin: 0;
+    }
+    body.dark-mode .about .profile-section .profile-meta .status {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      color:  #adaa80;
     }
        body.dark-mode .experience-section {
             background-color: #111827;
@@ -95,6 +119,42 @@ body.dark-mode .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
             position: relative;
             overflow: hidden;
         }
+        body.dark-mode .about .content-area .story-block p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #adaa80;
+      margin: 0;
+    }
+    body.dark-mode  .about .expertise-grid .expertise-item .expertise-content h4 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #adaa80;
+    }
+    body.dark-mode .about .expertise-grid .expertise-item .expertise-content p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #aaa;
+      margin: 0;
+    }
+    body.dark-mode .about .philosophy-quote p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      font-style: italic;
+      font-weight: 300;
+      color:  #adaa80;
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+    body.dark-mode     
+        .section-header p {
+            font-size: 1.1rem;
+            color: #aaa;
+            margin: 0;
+            max-width: 600px;
+        }
+
 /* Toggle button styles */
 .theme-btn {
   background: transparent;
@@ -109,9 +169,23 @@ body.dark-mode .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
   transform: rotate(20deg) scale(1.2);
   color: var(--primary);
 }
+/* Ensure navbar is not overlapped */
+    body {
+      padding-top: 80px; /* Adjusted for fixed navbar */
+      min-height: 100vh; /* Ensure content takes up at least full viewport height */
+      display: flex;
+      flex-direction: column;
+    }
+        footer {
+      margin-top: auto; /* Pushes footer to the bottom */
+    }
+body, header {
+  margin: 0;
+  padding: 0;
+}
 
 
-    /* ---------- Navbar Responsive ---------- */
+//* ---------- Navbar Responsive ---------- */
 @media (max-width: 991px) {
   nav {
     padding: 1rem 2rem;
@@ -125,28 +199,54 @@ body.dark-mode .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     gap: 1rem;
   }
   nav ul li a {
-    font-size: 15px; 
- } 
-       
+    font-size: 15px;
+  }
 }
-  .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+/* ---------- Hero Responsive ---------- */
+@media (max-width: 768px) {
+  .hero {
+    height: auto; /* allow content to grow */
+    padding: 80px 20px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Footer Responsive ---------- */
+.footer-grid {
+  grid-template-columns: 1fr 1fr; /* 2 per row on tablets */
+}
+
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr; /* 1 per row on small screens */
+  }
+  .footer-card {
+    aspect-ratio: auto; /* remove forced square on mobile */
+  }
+}
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     font-size: 14px;
     padding-top: .7rem;
     padding-bottom: .7rem;
     padding-left: 20px;
     padding-right: 20px;
-    color: #fdfdfd;
+    color: #0b0b0b;
     font-weight: 600;
     opacity: 1 !important;
     text-transform: uppercase;
 }
-  /* Navbar */
-    nav {
+  /* Replace the current navbar style */
+nav {
       width: 100%;
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 100;
+      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -161,6 +261,7 @@ body.dark-mode .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
   border-radius: 0 0 16px 16px; /* rounded bottom */
   transition: background 0.3s ease, padding 0.3s ease;
 }
+
 
 nav.scrolled {
   background: rgba(255, 255, 255, 0.15); /* more visible when scrolling */
@@ -329,26 +430,21 @@ nav.scrolled {
 
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
-  to   { opacity: 1; transform: translateY(0);  }
-   
+  to   { opacity: 1; transform: translateY(0); }
 }
-  
+/* Hide the loader */
+#ftco-loader {
+  display: none; /* Hide the loader */
+}
 
-    
-    
+
     body {
-      background-color: #111;
+      background-color: #e3e4e6;
       color: #fff;
     }
     
     /* About Section */
-    .about {
-      background: #e5e7eb;
-      color: #fff;
-      padding-top: 120px;
-      padding-bottom: 120px;
-    }
-
+   
     .about .intro-header {
       margin-bottom: 80px;
     }
@@ -358,13 +454,13 @@ nav.scrolled {
       font-weight: 300;
       letter-spacing: -0.02em;
       margin-bottom: 1rem;
-      color:  #b1b493;
+      color:  #151515;
     }
 
     .about .intro-header .subtitle {
       font-size: 1.25rem;
       font-weight: 400;
-      color: #aaa;
+      color:#0a0a0a;
       margin: 0;
     }
 
@@ -387,7 +483,7 @@ nav.scrolled {
       display: flex;
       align-items: center;
       margin-bottom: 1rem;
-      color:  #b1b493;
+      color: #131312;
     }
 
     .about .profile-section .profile-meta .location i {
@@ -399,7 +495,7 @@ nav.scrolled {
       display: flex;
       align-items: center;
       font-size: 0.9rem;
-      color:  #b1b493;
+      color:  #131313;
     }
 
     .about .profile-section .profile-meta .status .status-indicator {
@@ -426,7 +522,7 @@ nav.scrolled {
     .about .content-area .story-block p {
       font-size: 1.1rem;
       line-height: 1.8;
-      color: #bbb;
+      color: #0e0d0d;
       margin: 0;
     }
 
@@ -457,13 +553,13 @@ nav.scrolled {
       font-size: 1.1rem;
       font-weight: 500;
       margin-bottom: 0.5rem;
-      color: #fff;
+      color: #0f0f0f;
     }
 
     .about .expertise-grid .expertise-item .expertise-content p {
       font-size: 0.95rem;
       line-height: 1.6;
-      color: #aaa;
+      color: #111010;
       margin: 0;
     }
 
@@ -487,7 +583,7 @@ nav.scrolled {
       line-height: 1.7;
       font-style: italic;
       font-weight: 300;
-      color:  #b1b493;
+      color:  #131312;
       margin: 0;
       position: relative;
       z-index: 1;
@@ -509,7 +605,7 @@ nav.scrolled {
       .about .intro-header h1 { font-size: 2.2rem; }
       .about .intro-header .subtitle { font-size: 1.1rem; }
       .about .philosophy-quote .quote-mark { font-size: 3.5rem; left: -10px; }
-      .about .philosophy-quote p { font-size: 1.1rem; }
+      .about .philosophy-quote p { font-size: 1.6rem; }
     }
     
      .experience-section {
@@ -650,7 +746,7 @@ nav.scrolled {
         
         .section-header p {
             font-size: 1.1rem;
-            color: #aaa;
+            color: #1d1c1c;
             margin: 0;
             max-width: 600px;
         }
@@ -1125,20 +1221,6 @@ nav.scrolled {
 .team-card:hover .card-back {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
-
-/* ---------- Footer Responsive ---------- */
-.footer-grid {
-  grid-template-columns: 1fr 1fr; /* 2 per row on tablets */
-}
-
-@media (max-width: 600px) {
-  .footer-grid {
-    grid-template-columns: 1fr; /* 1 per row on small screens */
-  }
-  .footer-card {
-    aspect-ratio: auto; /* remove forced square on mobile */
-  }
-}
 /* Footer Base */
 /* Social & Contact Icons */
 .footer-column.about .social-links a,
@@ -1153,7 +1235,7 @@ nav.scrolled {
 
 /* Hover Effects for Social Icons */
 .footer-column.about .social-links a:hover {
-  color: #7109e0;
+  color: #6a11cb;
   transform: translateY(-5px) rotate(-10deg) scale(1.3);
   text-shadow: 0 0 10px rgba(106,17,203,0.6),
                0 0 20px rgba(38,117,252,0.6);
@@ -1170,7 +1252,7 @@ nav.scrolled {
   left: 0;
   pointer-events: none;
   transform: scale(0);
-  background: rgba(31, 2, 61, 0.2);
+  background: rgba(106,17,203,0.2);
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
@@ -1237,11 +1319,6 @@ nav.scrolled {
   line-height: 1.8;
   color: #cbd5e1;
 }
-footer .col-md-3:first-child {
-  background:#111827 !important;
-  box-shadow: none !important;
-}
-
 
 /* Social Icons */
 .social-links a {
@@ -1354,21 +1431,22 @@ footer .col-md-3:first-child {
 }
 
 .newsletter-form button:hover {
-  background: linear-gradient(135deg, #488bfe, #6a11cb);
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
   transform: translateY(-2px);
 }
 
 /* Responsive Footer Grid */
 @media (max-width: 1024px) {
   .footer-container {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 }
+
   </style>
 </head>
 <body>
 <!-- home -->
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar  ftco-navbar-light site-navbar-target" id="ftco-navbar">
 		<div class="container">
  <a href="index.html" class="navbar-brand">
       <img src="images/logo.jpeg" alt="Logo" class="logo">
@@ -1384,6 +1462,7 @@ footer .col-md-3:first-child {
       <i class="fas fa-moon"></i>
     </button>
 
+
 			<div id="ftco-nav">
 				<ul class="navbar-nav nav ml-auto">
 					<li class="nav-item"><a href="index.html" class="nav-link"><span>Home</span></a></li>
@@ -1392,11 +1471,11 @@ footer .col-md-3:first-child {
 					<li class="nav-item"><a href="projects.html" class="nav-link"><span>Achievements</span></a></li> 
 					<li class="nav-item"><a href="contact.html" class="nav-link"><span>Contact</span></a></li>
 				</ul>
+       
+
 			</div>
 		</div>
-	</nav>
-
- 
+	</nav> 
     <!-- About Section -->
   <section id="about" class="about section">
     <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -1666,9 +1745,9 @@ footer .col-md-3:first-child {
       </p>
       <div class="social-links">
         <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.facebook.com/share/1PeQeRikT1/" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://mdmosharrafhossain.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
 
@@ -1688,7 +1767,7 @@ footer .col-md-3:first-child {
     <div class="footer-column contact">
       <h3>Contact</h3>
       <p><i class="fas fa-map-marker-alt"></i> Chittagong, Bangladesh</p>
-      <p><i class="fas fa-phone"></i> ‪+8801726464904‬</p>
+      <p><i class="fas fa-phone"></i> +8801726464904</p>
       <p><i class="fas fa-envelope"></i> mosharraf.dlg@gmail.com</p>
       <p><i class="fas fa-clock"></i> Mon - Fri: 9:00 - 18:00</p>
     </div>
@@ -1709,12 +1788,18 @@ footer .col-md-3:first-child {
   </div>
 </footer>
 
+
+
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
  <!-- AOS Library for animations -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+// Hide the loader once page content is loaded
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById('ftco-loader').style.display = 'none';
+});
 
     
     // Initialize AOS
@@ -1740,6 +1825,7 @@ footer .col-md-3:first-child {
 		
 		<script src="js/main.js"></script>
 		<script>
+  document.getElementById("year").innerText = new Date().getFullYear();
   const toggleBtn = document.querySelector(".menu-toggle");
   const navCollapse = document.getElementById("ftco-nav");
 
@@ -1747,8 +1833,24 @@ footer .col-md-3:first-child {
     this.classList.toggle("active");
     navCollapse.classList.toggle("show"); // show/hide nav menu
   });
+  // Counter animation
+const counters = document.querySelectorAll('.number');
+counters.forEach(counter => {
+  counter.innerText = '0';
+  const updateCounter = () => {
+    const target = +counter.getAttribute('data-target');
+    const current = +counter.innerText;
+    const increment = target / 200;
 
-  
+    if(current < target) {
+      counter.innerText = `${Math.ceil(current + increment)}`;
+      setTimeout(updateCounter, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCounter();
+});
 </script>
 <script>
 // Dark/Light Mode Toggle
